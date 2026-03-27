@@ -50,8 +50,8 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
           <div className="bg-bg-card border border-blue-600/30 rounded-xl p-4">
             <p className="font-semibold text-blue-600 mb-2">Gym_Dots</p>
             <p className="text-sm text-text-secondary leading-relaxed">
-              The quality rating of your current gym. Ranges from 2 dots (Premier Fitness) to 39 dots
-              (Balboas Gym). This multiplies your entire gain linearly — switching from a 10-dot to a
+              The quality rating of your current gym. Ranges from 2 dots (Premier Fitness) up to 52
+              for the best endgame gyms. This multiplies your entire gain linearly — switching from a 10-dot to a
               20-dot gym literally doubles your output. Always train in the best gym you can access.
             </p>
           </div>
@@ -81,9 +81,9 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
           <div className="bg-bg-card border border-purple-600/30 rounded-xl p-4">
             <p className="font-semibold text-purple-600 mb-2">Steadfast + Education</p>
             <p className="text-sm text-text-secondary leading-relaxed">
-              Percentage multipliers that stack additively. Steadfast is a Torn perk (up to +20%).
-              Education courses can add up to +15%. These multiply your entire gain — a +35% total
-              bonus means every session gives you 35% more stats. Worth maxing out whenever possible.
+              Percentage multipliers that stack additively. Steadfast is a <strong className="text-text-primary">faction perk</strong> — your
+              faction&apos;s Steadfast upgrade boosts gym gains for specific stats on a rotation (up to +20% for the primary stat).
+              Education courses add up to ~+10%. These multiply your entire gain — worth maxing out.
             </p>
           </div>
         </div>

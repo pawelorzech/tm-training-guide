@@ -77,7 +77,7 @@ export function Section01_GettingStarted() {
           </table>
         </div>
         <p className="text-xs text-text-secondary mt-2">
-          More gyms unlock after Hank&apos;s — including <strong className="text-torn-green">Mr. Isoyamas</strong> (10 dots) at 250K total stats.
+          More gyms unlock as your stats grow — there are 33 gyms total, up to endgame gyms like <strong className="text-torn-green">George&apos;s</strong> (20 dots) and <strong className="text-torn-green">Balboas</strong> (39 dots).
         </p>
       </div>
 
@@ -89,7 +89,7 @@ export function Section01_GettingStarted() {
         </p>
         <p className="text-text-secondary text-sm">
           Specializing too early locks you into a build that may not fit your playstyle. Once you
-          hit around 250K total stats and unlock Mr. Isoyamas, you&apos;ll have enough game knowledge
+          get past the beginner gyms and have some game experience, you&apos;ll be ready
           to decide whether to go offensive (STR/SPD), defensive (DEF/DEX), or balanced.
         </p>
         <p className="text-text-secondary text-sm">
@@ -98,15 +98,15 @@ export function Section01_GettingStarted() {
         </p>
       </div>
 
-      {/* Mr. Isoyamas milestone callout */}
+      {/* George's milestone callout */}
       <div className="bg-bg-secondary border border-warning/30 rounded-xl p-4 flex gap-3 items-start">
         <span className="text-warning text-xl mt-0.5">★</span>
         <div>
-          <p className="font-semibold text-warning">First Real Milestone: Mr. Isoyamas</p>
+          <p className="font-semibold text-warning">Key Milestone: George&apos;s Gym</p>
           <p className="text-sm text-text-secondary mt-1">
-            Reach <strong className="text-text-primary">250,000 total stats</strong> to unlock Mr. Isoyamas (10 dots).
-            This is the standard &quot;you&apos;re past the tutorial&quot; threshold. At this point, start
-            thinking seriously about specialization and energy sources beyond natural regen.
+            Reaching <strong className="text-text-primary">George&apos;s</strong> (20 dots) is a big jump in training efficiency.
+            At this point, start thinking seriously about specialization, energy sources beyond natural regen,
+            and which endgame gym to aim for.
           </p>
         </div>
       </div>

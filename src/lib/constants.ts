@@ -95,7 +95,7 @@ export const ENERGY_SOURCES = [
   { id: "pointRefill", name: "Point Refill", energy: 150, cost: 845_000, cooldown: "1 per day", daily: 1, notes: "~25 points from Points Building." },
   { id: "fhc", name: "FHC (Full Happy Cake)", energy: 150, cost: 12_500_000, cooldown: "None (consumable)", daily: 1, notes: "Usually better to sell and buy Xanax (25x more efficient)." },
   { id: "energyCan", name: "Energy Can", energy: 25, cost: 2_100_000, cooldown: "None", daily: 6, notes: "$12.7M for 6-pack (150E total). Mid-tier efficiency." },
-  { id: "lsd", name: "LSD", energy: 50, cost: 150_000, cooldown: "~7h drug cooldown", daily: 0, notes: "Shares drug cooldown with Xanax. +50% DEF buff (combat)." },
+  { id: "lsd", name: "LSD", energy: 50, cost: 28_000, cooldown: "~7h drug cooldown", daily: 0, notes: "Shares drug cooldown with Xanax. +energy, +nerve, +happy." },
 ] as const;
 
 export const MERIT_STAT_BONUSES = {
@@ -110,8 +110,8 @@ export const DEFAULT_PRICES = {
   fhc: 12_500_000,
   statEnhancer: 450_000_000,
   energyCan: 2_100_000,
-  ecstasy: 200_000,
-  lsd: 150_000,
+  ecstasy: 40_000,
+  lsd: 28_000,
   pointRefill: 845_000,
 };
 

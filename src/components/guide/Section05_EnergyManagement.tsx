@@ -40,7 +40,7 @@ const RANKED_SOURCES = [
     costPerE: DEFAULT_PRICES.lsd / 50,
     badge: `${formatMoney(DEFAULT_PRICES.lsd / 50)}/E`,
     badgeColor: 'bg-torn-green/20 text-torn-green',
-    note: 'Cheapest cost/E but shares drug cooldown with Xanax. Also gives +50% DEF in combat.',
+    note: 'Cheapest cost/E but shares drug cooldown with Xanax. Also gives +nerve and +happy.',
   },
   {
     rank: 3,
@@ -160,7 +160,7 @@ export function Section05_EnergyManagement({
               Using FHC directly
             </p>
             <p className="text-text-primary">
-              FHC gives <span className="font-bold">150E</span> →{' '}
+              FHC refills energy to max (<span className="font-bold">~150E</span>) →{' '}
               <span className="text-warning font-bold">
                 +{formatStatShort(fhcComparison.useGain)} stat
               </span>

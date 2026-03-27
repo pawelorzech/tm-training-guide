@@ -110,14 +110,14 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
       <div className="bg-bg-secondary border-l-4 border-torn-green rounded-r-xl p-5 space-y-2">
         <p className="font-bold text-torn-green text-base">The Critical Insight</p>
         <p className="text-text-primary text-sm leading-relaxed">
-          At high stat values, <strong>Current_Stat completely dominates the formula</strong>. Once you
-          hit 500M+ stats, the stat component (0.00019106 × stat) is so large that happy, steadfast,
-          and education become relatively tiny multipliers on top of it.
+          At high stat values, <strong>your trained stat completely dominates the formula</strong>. Once you
+          hit 500M+, the stat component is so large that happy becomes a rounding error. Steadfast
+          and education are still important because they&apos;re <em>multipliers</em> on the whole result —
+          but happy&apos;s flat additive bonus becomes negligible.
         </p>
         <p className="text-text-secondary text-sm">
-          This is why your happy contribution percentage (shown in results above) collapses to near
-          zero at high stats — and why big players stop worrying about happy jumping. Your stat is
-          basically the whole formula at that point.
+          This is why the happy contribution % (shown in results above) collapses to near
+          zero at high stats — and why experienced players stop worrying about happy jumping.
         </p>
       </div>
 

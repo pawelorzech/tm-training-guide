@@ -1,18 +1,27 @@
+// Simplified gym list for the guide. "dots" is the quality rating used in the formula.
+// API gym IDs (used by Torn API) are mapped separately in API_GYM_ID_TO_DOTS.
+// Stage 1-2 gyms train all 4 stats. Stage 3+ gyms specialize.
 export const GYMS = [
-  { id: 1, name: "Premier Fitness", dots: 2.0, unlock: "Default", unlockType: "none" as const, unlockValue: 0 },
-  { id: 2, name: "Average Joe's", dots: 3.0, unlock: "Any stat > 100", unlockType: "anyStat" as const, unlockValue: 100 },
-  { id: 3, name: "Woody's Workout Club", dots: 4.0, unlock: "Any stat > 500", unlockType: "anyStat" as const, unlockValue: 500 },
-  { id: 4, name: "Beach Bum's", dots: 5.0, unlock: "Any stat > 1,000", unlockType: "anyStat" as const, unlockValue: 1_000 },
-  { id: 5, name: "Silver Gym", dots: 6.0, unlock: "Any stat > 2,500", unlockType: "anyStat" as const, unlockValue: 2_500 },
-  { id: 6, name: "Gold Gym", dots: 7.0, unlock: "Any stat > 5,000", unlockType: "anyStat" as const, unlockValue: 5_000 },
-  { id: 7, name: "Platinum Gym", dots: 8.0, unlock: "Any stat > 10,000", unlockType: "anyStat" as const, unlockValue: 10_000 },
-  { id: 8, name: "Hank's Gym", dots: 9.0, unlock: "Any stat > 25,000", unlockType: "anyStat" as const, unlockValue: 25_000 },
-  { id: 9, name: "Mr. Isoyamas", dots: 10.0, unlock: "Total stats > 250,000", unlockType: "totalStats" as const, unlockValue: 250_000 },
-  { id: 10, name: "Total Warfare", dots: 11.0, unlock: "Any 2 stats > 250,000", unlockType: "twoStats" as const, unlockValue: 250_000 },
-  { id: 11, name: "Elites", dots: 11.5, unlock: "DEX > 500K or DEF > 500K", unlockType: "specificStat" as const, unlockValue: 500_000, stats: ["DEX", "DEF"] },
-  { id: 12, name: "Sports Science Lab", dots: 12.0, unlock: "STR > 500K or SPD > 500K", unlockType: "specificStat" as const, unlockValue: 500_000, stats: ["STR", "SPD"], sslRestriction: true },
-  { id: 13, name: "George's Gym", dots: 20.0, unlock: "Any stat > 50M", unlockType: "anyStat" as const, unlockValue: 50_000_000 },
-  { id: 14, name: "Balboas Gym", dots: 39.0, unlock: "Total stats > 1B", unlockType: "totalStats" as const, unlockValue: 1_000_000_000 },
+  // Stage 1: Beginner gyms
+  { id: 1, name: "Premier Fitness", dots: 2.0, unlock: "Default", unlockType: "none" as const, unlockValue: 0, stage: 1 },
+  { id: 2, name: "Average Joe's", dots: 3.0, unlock: "Any stat > 100", unlockType: "anyStat" as const, unlockValue: 100, stage: 1 },
+  { id: 3, name: "Woody's Workout Club", dots: 4.0, unlock: "Any stat > 500", unlockType: "anyStat" as const, unlockValue: 500, stage: 1 },
+  { id: 4, name: "Beach Bods", dots: 5.0, unlock: "Any stat > 1,000", unlockType: "anyStat" as const, unlockValue: 1_000, stage: 1 },
+  { id: 5, name: "Silver Gym", dots: 6.0, unlock: "Any stat > 2,500", unlockType: "anyStat" as const, unlockValue: 2_500, stage: 1 },
+  { id: 8, name: "Global Gym", dots: 7.0, unlock: "Any stat > 25,000", unlockType: "anyStat" as const, unlockValue: 25_000, stage: 1 },
+  // Stage 2: Intermediate
+  { id: 16, name: "Deep Burn", dots: 10.0, unlock: "Various", unlockType: "anyStat" as const, unlockValue: 100_000, stage: 2 },
+  // Stage 3: Advanced (single-stat focus)
+  { id: 24, name: "George's", dots: 20.0, unlock: "Any stat > 50M", unlockType: "anyStat" as const, unlockValue: 50_000_000, stage: 3 },
+  // Stage 4: Endgame (specialized)
+  { id: 25, name: "Balboas Gym", dots: 39.0, unlock: "Total stats > 1B", unlockType: "totalStats" as const, unlockValue: 1_000_000_000, stage: 4, stats: ["DEF", "DEX"] },
+  { id: 26, name: "Frontline Fitness", dots: 39.0, unlock: "Total stats > 1B", unlockType: "totalStats" as const, unlockValue: 1_000_000_000, stage: 4, stats: ["STR", "SPD"] },
+  { id: 27, name: "Gym 3000", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["STR"] },
+  { id: 28, name: "Mr. Isoyamas", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["DEF"] },
+  { id: 29, name: "Total Rebound", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["SPD"] },
+  { id: 30, name: "Elites", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["DEX"] },
+  { id: 31, name: "Sports Science Lab", dots: 47.0, unlock: "Advanced", unlockType: "totalStats" as const, unlockValue: 5_000_000_000, stage: 4, sslRestriction: true },
+  { id: 32, name: "Unknown", dots: 52.0, unlock: "Endgame", unlockType: "totalStats" as const, unlockValue: 10_000_000_000, stage: 4 },
 ] as const;
 
 export type Gym = (typeof GYMS)[number];
@@ -106,42 +115,22 @@ export const DEFAULT_PRICES = {
   pointRefill: 845_000,
 };
 
-// Map Torn API gym IDs to our dots values
+// Map Torn API gym IDs to dots values for the formula.
 // API IDs from https://api.torn.com/v2/torn/gyms
 export const API_GYM_ID_TO_DOTS: Record<number, number> = {
-  1: 2.0,   // Premier Fitness
-  2: 3.0,   // Average Joes
-  3: 4.0,   // Woody's Workout Club
-  4: 5.0,   // Beach Bods
-  5: 6.0,   // Silver Gym
-  6: 6.0,   // Pour Femme
-  7: 6.0,   // Davies Den
-  8: 7.0,   // Global Gym
-  9: 8.0,   // Knuckle Heads
-  10: 8.0,  // Pioneer Fitness
-  11: 8.0,  // Anabolic Anomalies
-  12: 8.0,  // Core
-  13: 9.0,  // Racing Fitness
-  14: 9.0,  // Complete Cardio
-  15: 9.0,  // Legs, Bums and Tums
-  16: 10.0, // Deep Burn
-  17: 10.0, // Apollo Gym
-  18: 10.0, // Gun Shop
-  19: 11.0, // Force Training
-  20: 11.0, // Cha Cha's
-  21: 11.0, // Atlas
-  22: 11.5, // Last Round
-  23: 11.5, // The Edge
-  24: 20.0, // George's
-  25: 39.0, // Balboas Gym
-  26: 12.0, // Frontline Fitness
-  27: 10.0, // Gym 3000 (Mr. Isoyamas equivalent)
-  28: 10.0, // Mr. Isoyamas
-  29: 10.0, // Total Rebound
-  30: 10.0, // Elites
-  31: 12.0, // The Sports Science Lab
-  32: 39.0, // Unknown (endgame)
-  33: 5.0,  // The Jail Gym
+  1: 2.0, 2: 3.0, 3: 4.0, 4: 5.0, 5: 6.0, 6: 6.0, 7: 6.0, 8: 7.0,
+  9: 8.0, 10: 8.0, 11: 8.0, 12: 8.0, 13: 9.0, 14: 9.0, 15: 9.0, 16: 10.0,
+  17: 10.0, 18: 10.0, 19: 11.0, 20: 11.0, 21: 11.0, 22: 11.5, 23: 11.5,
+  24: 20.0,  // George's
+  25: 39.0,  // Balboas Gym (DEF/DEX)
+  26: 39.0,  // Frontline Fitness (STR/SPD)
+  27: 42.0,  // Gym 3000 (STR)
+  28: 42.0,  // Mr. Isoyamas (DEF)
+  29: 42.0,  // Total Rebound (SPD)
+  30: 42.0,  // Elites (DEX)
+  31: 47.0,  // Sports Science Lab
+  32: 52.0,  // Unknown (endgame)
+  33: 5.0,   // Jail Gym
 };
 
 export const STAT_MILESTONES = [

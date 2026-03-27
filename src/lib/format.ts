@@ -33,10 +33,12 @@ export function formatMoney(value: number): string {
     const k = value / 1_000;
     return `$${k.toFixed(0).replace(/\.?0+$/, '')}K`;
   }
-  return `$${value}`;
+  if (value < 1) return `$${value.toFixed(2)}`;
+  return `$${value.toFixed(0)}`;
 }
 
 export function formatMultiplier(value: number): string {
+  if (value >= 100) return `${Math.round(value)}x`;
   return `${value.toFixed(1)}x`;
 }
 

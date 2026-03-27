@@ -42,7 +42,10 @@ export function StatInputPanel({ state, onUpdate, apiPopulated }: StatInputPanel
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Current Stat */}
       <div>
-        <label className={labelClass}>Current Stat</label>
+        <label className={labelClass}>
+          Your {state.trainedStat} stat value
+          <span className="text-text-secondary font-normal ml-1">(the stat you&apos;re training)</span>
+        </label>
         <input
           type="number"
           min={0}
@@ -52,7 +55,7 @@ export function StatInputPanel({ state, onUpdate, apiPopulated }: StatInputPanel
           placeholder="e.g. 100000000"
         />
         {apiPopulated && (
-          <p className="text-xs text-blue-400 mt-0.5">Auto-filled from API</p>
+          <p className="text-xs text-blue-400 mt-0.5">Auto-filled from API (your highest stat)</p>
         )}
       </div>
 

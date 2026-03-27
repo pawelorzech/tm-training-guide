@@ -31,21 +31,21 @@ export function generateRecommendations(
     });
   }
 
-  // Gym upgrade check
-  const currentGymIndex = GYMS.findIndex(g => g.dots === state.gymDots);
-  if (currentGymIndex >= 0 && currentGymIndex < GYMS.length - 1) {
-    const nextGym = GYMS[currentGymIndex + 1];
-    if (state.currentStat >= nextGym.unlockValue) {
-      const improvement = ((nextGym.dots / state.gymDots) - 1) * 100;
-      recs.push({
-        id: 'upgrade-gym',
-        priority: 'high',
-        title: `Switch to ${nextGym.name}`,
-        description: `You qualify for ${nextGym.name} (${nextGym.dots} dots). That's +${improvement.toFixed(0)}% gains.`,
-        impact: `+${improvement.toFixed(0)}% gym gains`,
-        category: 'gym',
-      });
-    }
+  // Gym upgrade check — find the best gym the user qualifies for with higher dots
+  const betterGym = [...GYMS]
+    .filter(g => g.dots > state.gymDots && state.currentStat >= g.unlockValue)
+    .sort((a, b) => b.dots - a.dots)[0];
+
+  if (betterGym) {
+    const improvement = ((betterGym.dots / state.gymDots) - 1) * 100;
+    recs.push({
+      id: 'upgrade-gym',
+      priority: 'high',
+      title: `Switch to ${betterGym.name}`,
+      description: `You qualify for ${betterGym.name} (${betterGym.dots} dots). That's +${improvement.toFixed(0)}% gains.`,
+      impact: `+${improvement.toFixed(0)}% gym gains`,
+      category: 'gym',
+    });
   }
 
   // FHC sell vs use

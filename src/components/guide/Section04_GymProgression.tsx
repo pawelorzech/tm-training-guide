@@ -20,11 +20,8 @@ function getNextGym(currentStat: number, gymDots: number) {
 
 function canUnlock(gym: (typeof GYMS)[number], currentStat: number): boolean {
   if (gym.unlockType === 'none') return true;
-  if (gym.unlockType === 'anyStat') return currentStat >= gym.unlockValue;
-  if (gym.unlockType === 'totalStats') return currentStat >= gym.unlockValue;
-  if (gym.unlockType === 'twoStats') return currentStat >= gym.unlockValue;
-  if (gym.unlockType === 'specificStat') return currentStat >= gym.unlockValue;
-  return false;
+  // Simplified: compare currentStat against unlock value for all types
+  return currentStat >= gym.unlockValue;
 }
 
 export function Section04_GymProgression({ currentStat, gymDots }: Section04Props) {

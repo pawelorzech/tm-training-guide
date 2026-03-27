@@ -39,12 +39,29 @@ export function useCalculator(apiData: TornUserData | null) {
     const highest = statValues.reduce((a, b) => a.value > b.value ? a : b);
     const gymDots = getGymGainById(apiData.gym.active_gym, highest.stat);
 
+    // Map merit level for the trained stat
+    const meritMap = { STR: apiData.merits.brawn, DEF: apiData.merits.protection, SPD: apiData.merits.sharpness, DEX: apiData.merits.evasion };
+    const meritLevel = meritMap[highest.stat] ?? 0;
+
+    // Steadfast bonus for the trained stat (API gives %, we need decimal)
+    const steadfastMap = { STR: apiData.steadfast.strength, DEF: apiData.steadfast.defense, SPD: apiData.steadfast.speed, DEX: apiData.steadfast.dexterity };
+    const steadfastBonus = (steadfastMap[highest.stat] ?? 0) / 100;
+
+    // Education gym bonus — count completed gym-relevant courses
+    // Sports Science courses that give gym gains: Bachelor (ID varies), stat-specific courses
+    // Approximate: if many courses done, assume ~3-5% bonus
+    const eduCount = apiData.educationCompleted.length;
+    const educationBonus = eduCount > 100 ? 0.05 : eduCount > 50 ? 0.03 : eduCount > 20 ? 0.02 : 0.01;
+
     setState(prev => ({
       ...prev,
       currentStat: highest.value,
       trainedStat: highest.stat,
       gymDots,
       happy: apiData.bars.happy.current,
+      meritLevel,
+      steadfastBonus,
+      educationBonus,
     }));
   }, [apiData]);
 

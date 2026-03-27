@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { useTornApi } from '@/hooks/useTornApi';
 import { useCalculator } from '@/hooks/useCalculator';
@@ -7,7 +8,6 @@ import { useTheme } from '@/hooks/useTheme';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { TableOfContents } from '@/components/layout/TableOfContents';
 import { RecommendationsPanel } from '@/components/layout/RecommendationsPanel';
 import { ApiKeyInput } from '@/components/calculator/ApiKeyInput';
 import { ComparisonToggle } from '@/components/calculator/ComparisonToggle';
@@ -31,11 +31,27 @@ const StatProjectionChart = dynamic(
   { ssr: false, loading: () => <div className="h-64 bg-bg-card rounded-lg animate-pulse" /> }
 );
 
+const TABS = [
+  { id: 'calculator', label: 'Calculator', shortLabel: 'Calc' },
+  { id: 'basics', label: 'Getting Started', shortLabel: 'Basics' },
+  { id: 'formula', label: 'The Formula', shortLabel: 'Formula' },
+  { id: 'happy', label: 'Happy Jumping', shortLabel: 'Happy' },
+  { id: 'gyms', label: 'Gyms', shortLabel: 'Gyms' },
+  { id: 'energy', label: 'Energy', shortLabel: 'Energy' },
+  { id: 'enhancers', label: 'Stat Enhancers', shortLabel: 'SEs' },
+  { id: 'companies', label: 'Companies', shortLabel: 'Jobs' },
+  { id: 'merits', label: 'Merits & Books', shortLabel: 'Merits' },
+  { id: 'war', label: 'War Prep', shortLabel: 'War' },
+] as const;
+
+type TabId = (typeof TABS)[number]['id'];
+
 export default function Home() {
   const [apiKey, setApiKey] = useLocalStorage('tm-api-key', '');
   const tornApi = useTornApi();
   const { state, updateField, results } = useCalculator(tornApi.data);
   const { isDark, toggle: toggleTheme } = useTheme();
+  const [activeTab, setActiveTab] = useState<TabId>('calculator');
 
   const handleLoad = async () => {
     if (apiKey.trim()) {
@@ -58,103 +74,139 @@ export default function Home() {
         onToggleTheme={toggleTheme}
       />
 
-      <TableOfContents />
-
-      <main className="max-w-4xl mx-auto px-4 py-6 lg:pr-72 space-y-12">
-        {/* API Key Input */}
-        <div className="bg-bg-card rounded-lg p-4 sm:p-6 border border-torn-green/20">
-          <ApiKeyInput
-            apiKey={apiKey}
-            onApiKeyChange={setApiKey}
-            onLoad={handleLoad}
-            onClear={handleClear}
-            loading={tornApi.loading}
-            error={tornApi.error}
-            playerName={tornApi.data?.profile.name}
-          />
+      {/* Tab Navigation */}
+      <nav className="sticky top-[52px] z-40 bg-bg-secondary/95 backdrop-blur border-b border-torn-green/20">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex overflow-x-auto scrollbar-hide">
+            {TABS.map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`shrink-0 px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-medium transition-colors border-b-2 ${
+                  activeTab === tab.id
+                    ? 'border-torn-green text-torn-green'
+                    : 'border-transparent text-text-secondary hover:text-text-primary hover:border-text-secondary/30'
+                }`}
+              >
+                <span className="sm:hidden">{tab.shortLabel}</span>
+                <span className="hidden sm:inline">{tab.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
+      </nav>
 
-        {/* Recommendations (mobile: inline, desktop: hidden here — shown in sidebar) */}
-        <div className="lg:hidden">
-          <RecommendationsPanel recommendations={results.recommendations} />
-        </div>
+      <main className="max-w-4xl mx-auto px-4 py-6">
+        {/* Calculator Tab — always shows API key + calculator + recommendations */}
+        {activeTab === 'calculator' && (
+          <div className="space-y-6">
+            <div className="bg-bg-card rounded-lg p-4 sm:p-6 border border-torn-green/20">
+              <ApiKeyInput
+                apiKey={apiKey}
+                onApiKeyChange={setApiKey}
+                onLoad={handleLoad}
+                onClear={handleClear}
+                loading={tornApi.loading}
+                error={tornApi.error}
+                playerName={tornApi.data?.profile.name}
+              />
+            </div>
 
-        {/* Guide Sections */}
-        <Section01_GettingStarted />
+            <Section02_GymFormula
+              state={state}
+              results={results}
+              onUpdate={updateField}
+              apiPopulated={!!tornApi.data}
+            />
 
-        <Section02_GymFormula
-          state={state}
-          results={results}
-          onUpdate={updateField}
-          apiPopulated={!!tornApi.data}
-        />
+            <RecommendationsPanel recommendations={results.recommendations} />
 
-        <Section03_HappyJumping
-          currentStat={state.currentStat}
-          happy={state.happy}
-          happyContributionPercent={results.happyContributionPercent}
-        />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <section className="bg-bg-card rounded-lg p-4 sm:p-6 border border-torn-green/20">
+                <h2 className="text-lg font-bold text-text-primary mb-4">Stat Projection</h2>
+                <StatProjectionChart
+                  currentStat={state.currentStat}
+                  gainPerDay={results.gainPerDay}
+                />
+              </section>
 
-        <Section04_GymProgression
-          currentStat={state.currentStat}
-          gymDots={state.gymDots}
-        />
+              <section className="bg-bg-card rounded-lg p-4 sm:p-6 border border-torn-green/20">
+                <h2 className="text-lg font-bold text-text-primary mb-4">What If...?</h2>
+                <ComparisonToggle
+                  state={state}
+                  results={results}
+                  onUpdate={updateField}
+                />
+              </section>
+            </div>
+          </div>
+        )}
 
-        <Section05_EnergyManagement
-          energySources={state.energySources}
-          onUpdateEnergySources={(sources: EnergySources) => updateField('energySources', sources)}
-          gainPerEnergy={results.gainPerEnergy}
-          results={results}
-        />
+        {activeTab === 'basics' && <Section01_GettingStarted />}
 
-        <Section06_StatEnhancers
-          currentStat={state.currentStat}
-          results={results}
-        />
-
-        <Section07_CompanyPerks
-          trainedStat={state.trainedStat}
-          companyType={state.companyType}
-          onUpdateCompany={(company: string | null) => updateField('companyType', company)}
-        />
-
-        <Section08_MeritsAndBooks
-          trainedStat={state.trainedStat}
-          meritLevel={state.meritLevel}
-          educationBonus={state.educationBonus}
-          bookBonus={state.bookBonus}
-          onUpdateMerit={(level: number) => updateField('meritLevel', level)}
-          onUpdateEducation={(bonus: number) => updateField('educationBonus', bonus)}
-          onUpdateBook={(bonus: BookBonus) => updateField('bookBonus', bonus)}
-          gainPerDay={results.gainPerDay}
-        />
-
-        <Section09_TrainingBreak />
-
-        {/* Stat Projection Chart */}
-        <section className="bg-bg-card rounded-lg p-4 sm:p-6 border border-torn-green/20">
-          <h2 className="text-xl font-bold text-text-primary mb-4">Stat Projection</h2>
-          <StatProjectionChart
-            currentStat={state.currentStat}
-            gainPerDay={results.gainPerDay}
-          />
-        </section>
-
-        {/* Comparison Mode */}
-        <section className="bg-bg-card rounded-lg p-4 sm:p-6 border border-torn-green/20">
-          <h2 className="text-xl font-bold text-text-primary mb-4">What If...?</h2>
-          <ComparisonToggle
+        {activeTab === 'formula' && (
+          <Section02_GymFormula
             state={state}
             results={results}
             onUpdate={updateField}
+            apiPopulated={!!tornApi.data}
           />
-        </section>
-      </main>
+        )}
 
-      {/* Desktop: Floating Recommendations Sidebar */}
-      <aside className="hidden lg:block fixed top-20 right-4 w-64 max-h-[calc(100vh-6rem)] overflow-y-auto">
-        <RecommendationsPanel recommendations={results.recommendations} />
-      </aside>
+        {activeTab === 'happy' && (
+          <Section03_HappyJumping
+            currentStat={state.currentStat}
+            happy={state.happy}
+            happyContributionPercent={results.happyContributionPercent}
+          />
+        )}
+
+        {activeTab === 'gyms' && (
+          <Section04_GymProgression
+            currentStat={state.currentStat}
+            gymDots={state.gymDots}
+          />
+        )}
+
+        {activeTab === 'energy' && (
+          <Section05_EnergyManagement
+            energySources={state.energySources}
+            onUpdateEnergySources={(sources: EnergySources) => updateField('energySources', sources)}
+            gainPerEnergy={results.gainPerEnergy}
+            results={results}
+          />
+        )}
+
+        {activeTab === 'enhancers' && (
+          <Section06_StatEnhancers
+            currentStat={state.currentStat}
+            results={results}
+          />
+        )}
+
+        {activeTab === 'companies' && (
+          <Section07_CompanyPerks
+            trainedStat={state.trainedStat}
+            companyType={state.companyType}
+            onUpdateCompany={(company: string | null) => updateField('companyType', company)}
+          />
+        )}
+
+        {activeTab === 'merits' && (
+          <Section08_MeritsAndBooks
+            trainedStat={state.trainedStat}
+            meritLevel={state.meritLevel}
+            educationBonus={state.educationBonus}
+            bookBonus={state.bookBonus}
+            onUpdateMerit={(level: number) => updateField('meritLevel', level)}
+            onUpdateEducation={(bonus: number) => updateField('educationBonus', bonus)}
+            onUpdateBook={(bonus: BookBonus) => updateField('bookBonus', bonus)}
+            gainPerDay={results.gainPerDay}
+          />
+        )}
+
+        {activeTab === 'war' && <Section09_TrainingBreak />}
+      </main>
 
       <Footer />
     </div>

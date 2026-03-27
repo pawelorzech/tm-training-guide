@@ -49,13 +49,12 @@ describe('generateRecommendations', () => {
     expect(happyRec!.priority).toBe('medium');
   });
 
-  test('warns about SSL at 120+ xanax+ecstasy', () => {
+  test('does not warn about SSL (SSL not recommended)', () => {
     const recs = generateRecommendations(baseState, baseResults, {
       personalstats: { xantaken: 100, exttaken: 25, energydrinkused: 0 },
     } as any);
     const sslRec = recs.find(r => r.id === 'ssl-warning');
-    expect(sslRec).toBeDefined();
-    expect(sslRec!.priority).toBe('high');
+    expect(sslRec).toBeUndefined();
   });
 
   test('recommends xanax when not using it', () => {

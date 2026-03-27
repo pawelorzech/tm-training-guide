@@ -112,20 +112,9 @@ export function generateRecommendations(
     });
   }
 
-  // SSL warning
-  if (apiData?.personalstats) {
-    const total = (apiData.personalstats.xantaken ?? 0) + (apiData.personalstats.exttaken ?? 0);
-    if (total > 120) {
-      recs.push({
-        id: 'ssl-warning',
-        priority: 'high',
-        title: 'SSL Access at Risk!',
-        description: `You've used ${total} total Xanax + Ecstasy. At 150 you lose Sports Science Lab access forever.`,
-        impact: `${150 - total} uses remaining`,
-        category: 'warning',
-      });
-    }
-  }
+  // Note: SSL recommendation removed — SSL is not worth using.
+  // Regular gyms give more stats than SSL when you account for
+  // Xanax being the best energy source (and SSL bans you for using it).
 
   // Sort by priority, limit to 5
   const priorityOrder = { high: 0, medium: 1, low: 2 };

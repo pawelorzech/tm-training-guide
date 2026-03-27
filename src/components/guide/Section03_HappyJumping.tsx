@@ -128,20 +128,17 @@ export function Section03_HappyJumping({ currentStat, happy, happyContributionPe
         </div>
       </div>
 
-      {/* SSL Warning */}
-      <div className="bg-bg-secondary border border-danger/50 rounded-xl p-5 flex gap-3 items-start">
-        <span className="text-danger text-xl mt-0.5 shrink-0">⚠</span>
+      {/* SSL Note */}
+      <div className="bg-bg-secondary border border-text-secondary/30 rounded-xl p-5 flex gap-3 items-start">
+        <span className="text-text-secondary text-xl mt-0.5 shrink-0">💡</span>
         <div className="space-y-1">
-          <p className="font-bold text-danger">SSL Warning: Drug Usage Limit</p>
-          <p className="text-sm text-text-primary">
-            The <strong>Sports Science Lab</strong> (SSL) — a 12-dot gym unlocked at 500K STR or SPD —
-            has a strict drug restriction.
-          </p>
+          <p className="font-bold text-text-primary">Skip Sports Science Lab (SSL)</p>
           <p className="text-sm text-text-secondary">
-            <strong className="text-text-primary">Combined Xanax + Ecstasy usage above 150</strong> will
-            permanently kick you from the Sports Science Lab. This ban is irreversible. If you train at
-            the SSL, track your drug usage carefully. Happy jumping with Ecstasy burns into that quota
-            fast.
+            SSL bans you if you use more than 150 Xanax + Ecstasy combined. Since Xanax is the{' '}
+            <strong className="text-text-primary">single best training drug</strong>, restricting it
+            for SSL access is a terrible trade. You get more stats training at other
+            endgame gyms with unlimited Xanax than you ever would at SSL with drug restrictions.
+            Don&apos;t bother with SSL.
           </p>
         </div>
       </div>
@@ -153,7 +150,7 @@ export function Section03_HappyJumping({ currentStat, happy, happyContributionPe
           {[
             'Below 50M stats: happy jumping helps — happy is a real chunk of your gains',
             'Above 500M stats: don\'t bother — your stat dominates and happy is a rounding error',
-            'Never exceed 150 combined Xanax + Ecstasy usage if you train at the Sports Science Lab (permanent ban)',
+            'Skip SSL — restricting Xanax to keep SSL access costs you more stats than it gains',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-text-primary">
               <span className="text-torn-green mt-0.5 shrink-0">▸</span>

@@ -62,3 +62,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--torn-green);
 }
+
+/* Hide scrollbar on tab navigation */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

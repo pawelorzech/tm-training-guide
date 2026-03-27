@@ -64,16 +64,15 @@ export function Section04_GymProgression({ currentStat, gymDots }: Section04Prop
         </div>
       )}
 
-      {/* SSL restriction callout */}
-      <div className="border border-danger rounded-lg p-4 bg-danger/5">
-        <p className="text-danger font-bold text-sm uppercase tracking-wide mb-1">
-          SSL Restriction — Read This
+      {/* SSL note */}
+      <div className="border border-text-secondary/30 rounded-lg p-4 bg-bg-card">
+        <p className="text-text-primary font-bold text-sm mb-1">
+          Don&apos;t bother with SSL
         </p>
-        <p className="text-text-primary text-sm">
-          If your combined Xanax + Ecstasy usage exceeds 150, you&apos;re permanently kicked out of
-          Sports Science Lab.{' '}
-          <span className="font-bold text-torn-green">LSD is safe</span> — it doesn&apos;t count
-          toward this limit.
+        <p className="text-text-secondary text-sm">
+          Sports Science Lab bans you after 150 Xanax + Ecstasy uses. Since Xanax is the best
+          energy source in the game, limiting it for SSL access is never worth it. Train at Balboas
+          or other endgame gyms instead — no restrictions, better long-term results.
         </p>
       </div>
 
@@ -186,8 +185,8 @@ export function Section04_GymProgression({ currentStat, gymDots }: Section04Prop
             then grind to <span className="text-text-primary font-semibold">Balboas</span> (1B total stats).
           </li>
           <li>
-            <span className="text-danger font-semibold">
-              Never exceed 150 combined Xanax + Ecstasy if you want SSL.
+            <span className="text-text-primary font-semibold">
+              Skip SSL — unlimited Xanax at other gyms beats restricted SSL access.
             </span>
           </li>
         </ul>

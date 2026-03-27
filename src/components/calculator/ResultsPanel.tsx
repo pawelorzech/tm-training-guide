@@ -178,7 +178,7 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
             <span className="text-torn-green font-semibold">{formatMoney(seComparison.xanaxCostPerStat)}</span>
           </div>
           <div className="bg-torn-green/20 text-torn-green text-xs font-bold px-2 py-1 rounded border border-torn-green/30">
-            Xanax {formatMultiplier(seComparison.ratio)}x cheaper
+            Xanax {formatMultiplier(seComparison.ratio)} cheaper
           </div>
         </div>
       </div>

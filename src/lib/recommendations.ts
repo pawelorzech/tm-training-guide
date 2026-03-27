@@ -1,6 +1,6 @@
 import type { CalculatorState, CalculatorResults, Recommendation } from '@/types/calculator';
 import type { TornUserData } from '@/types/torn-api';
-import { GYMS } from './constants';
+import { GYMS, getGymGain } from './constants';
 import { formatStatShort, formatMultiplier } from './format';
 
 export function generateRecommendations(
@@ -31,19 +31,24 @@ export function generateRecommendations(
     });
   }
 
-  // Gym upgrade check — find the best gym the user qualifies for with higher dots
+  // Gym upgrade check — find a gym with higher gains for the trained stat
+  const currentGymGain = state.gymDots; // gymDots is actually the gain multiplier for trained stat
   const betterGym = [...GYMS]
-    .filter(g => g.dots > state.gymDots && state.currentStat >= g.unlockValue)
-    .sort((a, b) => b.dots - a.dots)[0];
+    .filter(g => {
+      const gain = getGymGain(g.id, state.trainedStat);
+      return gain > currentGymGain && gain > 0;
+    })
+    .sort((a, b) => getGymGain(b.id, state.trainedStat) - getGymGain(a.id, state.trainedStat))[0];
 
   if (betterGym) {
-    const improvement = ((betterGym.dots / state.gymDots) - 1) * 100;
+    const betterGain = getGymGain(betterGym.id, state.trainedStat);
+    const improvement = ((betterGain / currentGymGain) - 1) * 100;
     recs.push({
       id: 'upgrade-gym',
       priority: 'high',
       title: `Switch to ${betterGym.name}`,
-      description: `You qualify for ${betterGym.name} (${betterGym.dots} dots). That's +${improvement.toFixed(0)}% gains.`,
-      impact: `+${improvement.toFixed(0)}% gym gains`,
+      description: `${betterGym.name} has ${betterGain}x ${state.trainedStat} gains vs your ${currentGymGain}x. Requirement: ${betterGym.unlock}`,
+      impact: `+${improvement.toFixed(0)}% ${state.trainedStat} gains`,
       category: 'gym',
     });
   }

@@ -1,0 +1,949 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "TORN WIKI" [ref=e6] [cursor=pointer]:
+          - /url: https://wiki.torn.com
+        - link "Back to Torn" [ref=e7] [cursor=pointer]:
+          - /url: https://torn.com/
+          - img [ref=e8]
+          - text: Back to Torn
+      - generic [ref=e12]:
+        - text: 
+        - generic [ref=e13]:
+          - search [ref=e15]:
+            - generic [ref=e17]:
+              - searchbox "Search Torncity WIKI - The official help and support guide [ctrl-option-f]" [ref=e18]
+              - img [ref=e19]
+          - navigation [ref=e23]:
+            - generic [ref=e24]: Quick Links
+            - link "New Player Missions" [ref=e25] [cursor=pointer]:
+              - /url: /wiki/New_Player_Missions
+            - link "API" [ref=e26] [cursor=pointer]:
+              - /url: /wiki/API
+            - link "Attacking" [ref=e27] [cursor=pointer]:
+              - /url: /wiki/Attack
+            - link "Awards" [ref=e28] [cursor=pointer]:
+              - /url: /wiki/Award
+            - link "Battle Stats" [ref=e29] [cursor=pointer]:
+              - /url: /wiki/Battle_Stat
+            - link "Companies" [ref=e30] [cursor=pointer]:
+              - /url: /wiki/Company
+            - link "Crimes" [ref=e31] [cursor=pointer]:
+              - /url: /wiki/Crimes_2.0
+            - link "Donator" [ref=e32] [cursor=pointer]:
+              - /url: /wiki/Donator
+            - link "Drugs" [ref=e33] [cursor=pointer]:
+              - /url: /wiki/Drug
+            - link "Items" [ref=e34] [cursor=pointer]:
+              - /url: /wiki/Item
+            - link "Travel" [ref=e35] [cursor=pointer]:
+              - /url: /wiki/Travel
+            - link "Hunting" [ref=e36] [cursor=pointer]:
+              - /url: /wiki/Hunting
+            - link "Marriage" [ref=e37] [cursor=pointer]:
+              - /url: /wiki/Marriage
+            - link "Merits" [ref=e38] [cursor=pointer]:
+              - /url: /wiki/Merit
+            - link "Energy" [ref=e39] [cursor=pointer]:
+              - /url: /wiki/Energy
+            - link "Nerve" [ref=e40] [cursor=pointer]:
+              - /url: /wiki/Nerve
+            - link "Happy" [ref=e41] [cursor=pointer]:
+              - /url: /wiki/Happy
+            - link "Race Track" [ref=e42] [cursor=pointer]:
+              - /url: /wiki/Race_Track
+            - link "Reports" [ref=e43] [cursor=pointer]:
+              - /url: /wiki/Reports
+            - link "Stock Market" [ref=e44] [cursor=pointer]:
+              - /url: /wiki/Stock_Market
+            - link "Territories" [ref=e45] [cursor=pointer]:
+              - /url: /wiki/Territory
+            - generic [ref=e46]: Areas
+            - link "City" [ref=e47] [cursor=pointer]:
+              - /url: /wiki/City
+            - link "Jobs" [ref=e48] [cursor=pointer]:
+              - /url: /wiki/Job
+            - link "Gym":
+              - /url: /wiki/Gym
+            - link "Properties" [ref=e49] [cursor=pointer]:
+              - /url: /wiki/Properties
+            - link "Education" [ref=e50] [cursor=pointer]:
+              - /url: /wiki/Education
+            - link "Crimes" [ref=e51] [cursor=pointer]:
+              - /url: /wiki/Crimes_2.0
+            - link "Missions" [ref=e52] [cursor=pointer]:
+              - /url: /wiki/Mission
+            - link "Newspaper" [ref=e53] [cursor=pointer]:
+              - /url: /wiki/Newspaper
+            - link "Jail" [ref=e54] [cursor=pointer]:
+              - /url: /wiki/Jail
+            - link "Hospital" [ref=e55] [cursor=pointer]:
+              - /url: /wiki/Hospital
+            - link "Casino" [ref=e56] [cursor=pointer]:
+              - /url: /wiki/Casino
+            - link "Forums" [ref=e57] [cursor=pointer]:
+              - /url: /wiki/Forum
+            - link "Hall of Fame" [ref=e58] [cursor=pointer]:
+              - /url: /wiki/Hall_of_Fame
+            - link "Factions" [ref=e59] [cursor=pointer]:
+              - /url: /wiki/Faction
+            - generic [ref=e60]: Navigation
+            - link "Main Page" [ref=e61] [cursor=pointer]:
+              - /url: /wiki/Main_Page
+            - link "Contributors" [ref=e62] [cursor=pointer]:
+              - /url: /wiki/Contributors
+            - link "Community Portal" [ref=e63] [cursor=pointer]:
+              - /url: https://www.torn.com/fans.php
+            - link "Terms of Use" [ref=e64] [cursor=pointer]:
+              - /url: https://www.torn.com/rules.php#tab=terms_of_use
+            - link "Rules" [ref=e65] [cursor=pointer]:
+              - /url: https://www.torn.com/rules.php
+            - link "Current Events" [ref=e66] [cursor=pointer]:
+              - /url: /wiki/Current_Events
+            - link "FAQ" [ref=e67] [cursor=pointer]:
+              - /url: /wiki/FAQ
+    - generic [ref=e68]:
+      - main [ref=e69]:
+        - heading "Gym" [level=1] [ref=e70]
+        - generic [ref=e73]:
+          - navigation "Contents" [ref=e74]:
+            - button "hide" [ref=e75] [cursor=pointer]
+            - generic [ref=e76]:
+              - heading "Contents" [level=2] [ref=e77]
+              - generic [ref=e78]:
+                - text: "["
+                - generic [ref=e79] [cursor=pointer]: hide
+                - text: "]"
+            - list [ref=e80]:
+              - listitem [ref=e81]:
+                - link "1 About" [ref=e82] [cursor=pointer]:
+                  - /url: "#About"
+              - listitem [ref=e83]:
+                - link "2 Standard Gyms Overview" [ref=e84] [cursor=pointer]:
+                  - /url: "#Standard_Gyms_Overview"
+                - list [ref=e85]:
+                  - listitem [ref=e86]:
+                    - link "2.1 Light-Weight Gyms" [ref=e87] [cursor=pointer]:
+                      - /url: "#Light-Weight_Gyms"
+                  - listitem [ref=e88]:
+                    - link "2.2 Middle-Weight Gyms" [ref=e89] [cursor=pointer]:
+                      - /url: "#Middle-Weight_Gyms"
+                  - listitem [ref=e90]:
+                    - link "2.3 Heavy-Weight Gyms" [ref=e91] [cursor=pointer]:
+                      - /url: "#Heavy-Weight_Gyms"
+              - listitem [ref=e92]:
+                - link "3 Specialist Gyms & Requirements" [ref=e93] [cursor=pointer]:
+                  - /url: "#Specialist_Gyms_.26_Requirements"
+              - listitem [ref=e94]:
+                - link "4 Jail Gym (aka Crims Gym)" [ref=e95] [cursor=pointer]:
+                  - /url: "#Jail_Gym_.28aka_Crims_Gym.29"
+              - listitem [ref=e96]:
+                - link "5 Related Awards" [ref=e97] [cursor=pointer]:
+                  - /url: "#Related_Awards"
+              - listitem [ref=e98]:
+                - link "6 Related Books" [ref=e99] [cursor=pointer]:
+                  - /url: "#Related_Books"
+              - listitem [ref=e100]:
+                - link "7 Notes" [ref=e101] [cursor=pointer]:
+                  - /url: "#Notes"
+              - listitem [ref=e102]:
+                - link "8 Training Formulas" [ref=e103] [cursor=pointer]:
+                  - /url: "#Training_Formulas"
+                - list [ref=e104]:
+                  - listitem [ref=e105]:
+                    - link "8.1 Gym Gains Formula" [ref=e106] [cursor=pointer]:
+                      - /url: "#Gym_Gains_Formula"
+                  - listitem [ref=e107]:
+                    - link "8.2 Happy Loss" [ref=e108] [cursor=pointer]:
+                      - /url: "#Happy_Loss"
+                    - list [ref=e109]:
+                      - listitem [ref=e110]:
+                        - link "8.2.1 Historical Notes" [ref=e111] [cursor=pointer]:
+                          - /url: "#Historical_Notes"
+              - listitem [ref=e112]:
+                - link "9 Gym Training Stat Cap Removal" [ref=e113] [cursor=pointer]:
+                  - /url: "#Gym_Training_Stat_Cap_Removal"
+              - listitem [ref=e114]:
+                - link "10 Patch History" [ref=e115] [cursor=pointer]:
+                  - /url: "#Patch_History"
+          - heading "About" [level=2] [ref=e116]
+          - paragraph [ref=e117]:
+            - text: New players automatically join the
+            - link "Premier Fitness" [ref=e118] [cursor=pointer]:
+              - /url: http://www.torn.com/wiki/Gym#Premier_Fitness
+            - text: gym.
+          - paragraph [ref=e119]:
+            - text: To find the Gym simply click Gym on your
+            - link "Sidebar" [ref=e120] [cursor=pointer]:
+              - /url: /wiki/Sidebar
+            - text: ", or from the West-Side of the"
+            - link "City" [ref=e121] [cursor=pointer]:
+              - /url: /wiki/City
+            - text: .
+          - paragraph [ref=e122]: There are thirty-three gyms in total, twenty-four "standard" gyms to progress to George's and nine special-use gyms. To unlock the new "standard" gyms all you have to do is train and pay the fee to open the new gym. You’ll slowly gain gym EXP which will allow you to access new and better gyms. The next gym will be available for you once you have the required gym EXP to join. To join, click the [Activate] button next to the gyms name and click the Buy Membership button.
+          - paragraph [ref=e123]: "All gyms have unique action text for each stat, for example: \"You managed to complete 1 bicep curl using the 23kg dumbbells\". You’ll see this action text constantly improve as you increase your stats."
+          - paragraph [ref=e124]: Next to each stat, there are 10 individual bars (multipliers). How much you gain from each gym is indicated by how many bars are highlighted. For example, in the Global Gym each stat has 4 bars highlighted while Premier Fitness only has 2 bars highlighted for each stat.
+          - paragraph [ref=e125]: All gyms have a unique set of multipliers, some will provide more stats than others, some will not allow you to train certain stats at all. You can see the Gym Overview before you purchase a membership to see roughly what stats you’ll be getting.
+          - paragraph [ref=e126]: "Note for new players: The Defense gains in Crim's (the gym found in jail) are better than the Defense gains in any of the lightweight gyms. If you are a new player and find yourself in jail, consider training Defense in Crim's Gym. Once you reach the middleweight gym Pioneer Fitness there is no longer an advantage to using the jail gym."
+          - paragraph [ref=e127]
+          - heading "Standard Gyms Overview" [level=2] [ref=e128]
+          - list [ref=e129]:
+            - listitem [ref=e130]: "Note: In the API, the \"Gains\" are stored as a factor of 10 higher. E.g. for Premier Fitness, Strength is 20 rather than 2.0."
+          - heading "Light-Weight Gyms" [level=3] [ref=e131]
+          - table [ref=e133]:
+            - rowgroup
+            - rowgroup [ref=e134]:
+              - row "Gym name Cost to Unlock Cost of One Train Strength gains Speed gains Defense gains Dex. gains Estimate E for next gym" [ref=e135]:
+                - cell "Gym name" [ref=e136]
+                - cell "Cost to Unlock" [ref=e137]
+                - cell "Cost of One Train" [ref=e138]
+                - cell "Strength gains" [ref=e139]
+                - cell "Speed gains" [ref=e140]
+                - cell "Defense gains" [ref=e141]
+                - cell "Dex. gains" [ref=e142]
+                - cell "Estimate E for next gym" [ref=e143]:
+                  - text: Estimate E for
+                  - text: next gym
+              - row "Premier Fitness $10 5 energy 2.0 2.0 2.0 2.0 200" [ref=e144]:
+                - cell "Premier Fitness" [ref=e145]
+                - cell "$10" [ref=e146]
+                - cell "5 energy" [ref=e147]
+                - cell "2.0" [ref=e148]
+                - cell "2.0" [ref=e149]
+                - cell "2.0" [ref=e150]
+                - cell "2.0" [ref=e151]
+                - cell "200" [ref=e152]
+              - row "Average Joes $100 5 energy 2.4 2.4 2.8 2.4 500" [ref=e153]:
+                - cell "Average Joes" [ref=e154]
+                - cell "$100" [ref=e155]
+                - cell "5 energy" [ref=e156]
+                - cell "2.4" [ref=e157]
+                - cell "2.4" [ref=e158]
+                - cell "2.8" [ref=e159]
+                - cell "2.4" [ref=e160]
+                - cell "500" [ref=e161]
+              - row "Woody's Workout $250 5 energy 2.7 3.2 3.0 2.7 1,000" [ref=e162]:
+                - cell "Woody's Workout" [ref=e163]
+                - cell "$250" [ref=e164]
+                - cell "5 energy" [ref=e165]
+                - cell "2.7" [ref=e166]
+                - cell "3.2" [ref=e167]
+                - cell "3.0" [ref=e168]
+                - cell "2.7" [ref=e169]
+                - cell "1,000" [ref=e170]
+              - row "Beach Bods $500 5 energy 3.2 3.2 3.2 - 2,000" [ref=e171]:
+                - cell "Beach Bods" [ref=e172]
+                - cell "$500" [ref=e173]
+                - cell "5 energy" [ref=e174]
+                - cell "3.2" [ref=e175]
+                - cell "3.2" [ref=e176]
+                - cell "3.2" [ref=e177]
+                - cell "-" [ref=e178]
+                - cell "2,000" [ref=e179]
+              - row "Silver Gym $1,000 5 energy 3.4 3.6 3.4 3.2 2,750" [ref=e180]:
+                - cell "Silver Gym" [ref=e181]
+                - cell "$1,000" [ref=e182]
+                - cell "5 energy" [ref=e183]
+                - cell "3.4" [ref=e184]
+                - cell "3.6" [ref=e185]
+                - cell "3.4" [ref=e186]
+                - cell "3.2" [ref=e187]
+                - cell "2,750" [ref=e188]
+              - row "Pour Femme $2,500 5 energy 3.4 3.6 3.6 3.8 3,000" [ref=e189]:
+                - cell "Pour Femme" [ref=e190]
+                - cell "$2,500" [ref=e191]
+                - cell "5 energy" [ref=e192]
+                - cell "3.4" [ref=e193]
+                - cell "3.6" [ref=e194]
+                - cell "3.6" [ref=e195]
+                - cell "3.8" [ref=e196]
+                - cell "3,000" [ref=e197]
+              - row "Davies Den $5,000 5 energy 3.7 - 3.7 3.7 3,500" [ref=e198]:
+                - cell "Davies Den" [ref=e199]
+                - cell "$5,000" [ref=e200]
+                - cell "5 energy" [ref=e201]
+                - cell "3.7" [ref=e202]
+                - cell "-" [ref=e203]
+                - cell "3.7" [ref=e204]
+                - cell "3.7" [ref=e205]
+                - cell "3,500" [ref=e206]
+              - row "Global Gym $10,000 5 energy 4.0 4.0 4.0 4.0 4,000" [ref=e207]:
+                - cell "Global Gym" [ref=e208]
+                - cell "$10,000" [ref=e209]
+                - cell "5 energy" [ref=e210]
+                - cell "4.0" [ref=e211]
+                - cell "4.0" [ref=e212]
+                - cell "4.0" [ref=e213]
+                - cell "4.0" [ref=e214]
+                - cell "4,000" [ref=e215]
+            - rowgroup
+          - heading "Middle-Weight Gyms" [level=3] [ref=e216]
+          - table [ref=e218]:
+            - rowgroup
+            - rowgroup [ref=e219]:
+              - row "Gym name Cost to Unlock Cost of One Train Strength gains Speed gains Defense gains Dex. gains Estimate E for next gym" [ref=e220]:
+                - cell "Gym name" [ref=e221]
+                - cell "Cost to Unlock" [ref=e222]
+                - cell "Cost of One Train" [ref=e223]
+                - cell "Strength gains" [ref=e224]
+                - cell "Speed gains" [ref=e225]
+                - cell "Defense gains" [ref=e226]
+                - cell "Dex. gains" [ref=e227]
+                - cell "Estimate E for next gym" [ref=e228]:
+                  - text: Estimate E for
+                  - text: next gym
+              - row "Knuckle Heads $50,000 10 energy 4.8 4.4 4.0 4.2 6,000" [ref=e229]:
+                - cell "Knuckle Heads" [ref=e230]
+                - cell "$50,000" [ref=e231]
+                - cell "10 energy" [ref=e232]
+                - cell "4.8" [ref=e233]
+                - cell "4.4" [ref=e234]
+                - cell "4.0" [ref=e235]
+                - cell "4.2" [ref=e236]
+                - cell "6,000" [ref=e237]
+              - row "Pioneer Fitness $100,000 10 energy 4.4 4.6 4.8 4.4 7,000" [ref=e238]:
+                - cell "Pioneer Fitness" [ref=e239]
+                - cell "$100,000" [ref=e240]
+                - cell "10 energy" [ref=e241]
+                - cell "4.4" [ref=e242]
+                - cell "4.6" [ref=e243]
+                - cell "4.8" [ref=e244]
+                - cell "4.4" [ref=e245]
+                - cell "7,000" [ref=e246]
+              - row "Anabolic Anomalies $250,000 10 energy 5.0 4.6 5.2 4.6 8,000" [ref=e247]:
+                - cell "Anabolic Anomalies" [ref=e248]
+                - cell "$250,000" [ref=e249]
+                - cell "10 energy" [ref=e250]
+                - cell "5.0" [ref=e251]
+                - cell "4.6" [ref=e252]
+                - cell "5.2" [ref=e253]
+                - cell "4.6" [ref=e254]
+                - cell "8,000" [ref=e255]
+              - row "Core $500,000 10 energy 5.0 5.2 5.0 5.0 11,000" [ref=e256]:
+                - cell "Core" [ref=e257]
+                - cell "$500,000" [ref=e258]
+                - cell "10 energy" [ref=e259]
+                - cell "5.0" [ref=e260]
+                - cell "5.2" [ref=e261]
+                - cell "5.0" [ref=e262]
+                - cell "5.0" [ref=e263]
+                - cell "11,000" [ref=e264]
+              - row "Racing Fitness $1,000,000 10 energy 5.0 5.4 4.8 5.2 12,420" [ref=e265]:
+                - cell "Racing Fitness" [ref=e266]
+                - cell "$1,000,000" [ref=e267]
+                - cell "10 energy" [ref=e268]
+                - cell "5.0" [ref=e269]
+                - cell "5.4" [ref=e270]
+                - cell "4.8" [ref=e271]
+                - cell "5.2" [ref=e272]
+                - cell "12,420" [ref=e273]
+              - row "Complete Cardio $2,000,000 10 energy 5.5 5.7 5.5 5.2 18,000" [ref=e274]:
+                - cell "Complete Cardio" [ref=e275]
+                - cell "$2,000,000" [ref=e276]
+                - cell "10 energy" [ref=e277]
+                - cell "5.5" [ref=e278]
+                - cell "5.7" [ref=e279]
+                - cell "5.5" [ref=e280]
+                - cell "5.2" [ref=e281]
+                - cell "18,000" [ref=e282]
+              - row "Legs, Bums and Tums $3,000,000 10 energy - 5.5 5.5 5.7 18,100" [ref=e283]:
+                - cell "Legs, Bums and Tums" [ref=e284]
+                - cell "$3,000,000" [ref=e285]
+                - cell "10 energy" [ref=e286]
+                - cell "-" [ref=e287]
+                - cell "5.5" [ref=e288]
+                - cell "5.5" [ref=e289]
+                - cell "5.7" [ref=e290]
+                - cell "18,100" [ref=e291]
+              - row "Deep Burn $5,000,000 10 energy 6.0 6.0 6.0 6.0 24,140" [ref=e292]:
+                - cell "Deep Burn" [ref=e293]
+                - cell "$5,000,000" [ref=e294]
+                - cell "10 energy" [ref=e295]
+                - cell "6.0" [ref=e296]
+                - cell "6.0" [ref=e297]
+                - cell "6.0" [ref=e298]
+                - cell "6.0" [ref=e299]
+                - cell "24,140" [ref=e300]
+            - rowgroup
+          - heading "Heavy-Weight Gyms" [level=3] [ref=e301]
+          - table [ref=e303]:
+            - rowgroup
+            - rowgroup [ref=e304]:
+              - row "Gym name Cost to Unlock Cost of One Train Strength gains Speed gains Defense gains Dex. gains Estimate E for next gym" [ref=e305]:
+                - cell "Gym name" [ref=e306]
+                - cell "Cost to Unlock" [ref=e307]
+                - cell "Cost of One Train" [ref=e308]
+                - cell "Strength gains" [ref=e309]
+                - cell "Speed gains" [ref=e310]
+                - cell "Defense gains" [ref=e311]
+                - cell "Dex. gains" [ref=e312]
+                - cell "Estimate E for next gym" [ref=e313]:
+                  - text: Estimate E for
+                  - text: next gym
+              - row "Apollo Gym $7,500,000 10 energy 6.0 6.2 6.4 6.2 31,260" [ref=e314]:
+                - cell "Apollo Gym" [ref=e315]
+                - cell "$7,500,000" [ref=e316]
+                - cell "10 energy" [ref=e317]
+                - cell "6.0" [ref=e318]
+                - cell "6.2" [ref=e319]
+                - cell "6.4" [ref=e320]
+                - cell "6.2" [ref=e321]
+                - cell "31,260" [ref=e322]
+              - row "Gun Shop $10,000,000 10 energy 6.5 6.4 6.2 6.2 36,610" [ref=e323]:
+                - cell "Gun Shop" [ref=e324]
+                - cell "$10,000,000" [ref=e325]
+                - cell "10 energy" [ref=e326]
+                - cell "6.5" [ref=e327]
+                - cell "6.4" [ref=e328]
+                - cell "6.2" [ref=e329]
+                - cell "6.2" [ref=e330]
+                - cell "36,610" [ref=e331]
+              - row "Force Training $15,000,000 10 energy 6.4 6.5 6.4 6.8 46,640" [ref=e332]:
+                - cell "Force Training" [ref=e333]
+                - cell "$15,000,000" [ref=e334]
+                - cell "10 energy" [ref=e335]
+                - cell "6.4" [ref=e336]
+                - cell "6.5" [ref=e337]
+                - cell "6.4" [ref=e338]
+                - cell "6.8" [ref=e339]
+                - cell "46,640" [ref=e340]
+              - row "Cha Cha's $20,000,000 10 energy 6.4 6.4 6.8 7.0 56,520" [ref=e341]:
+                - cell "Cha Cha's" [ref=e342]
+                - cell "$20,000,000" [ref=e343]
+                - cell "10 energy" [ref=e344]
+                - cell "6.4" [ref=e345]
+                - cell "6.4" [ref=e346]
+                - cell "6.8" [ref=e347]
+                - cell "7.0" [ref=e348]
+                - cell "56,520" [ref=e349]
+              - row "Atlas $30,000,000 10 energy 7.0 6.4 6.4 6.5 67,775" [ref=e350]:
+                - cell "Atlas" [ref=e351]
+                - cell "$30,000,000" [ref=e352]
+                - cell "10 energy" [ref=e353]
+                - cell "7.0" [ref=e354]
+                - cell "6.4" [ref=e355]
+                - cell "6.4" [ref=e356]
+                - cell "6.5" [ref=e357]
+                - cell "67,775" [ref=e358]
+              - row "Last Round $50,000,000 10 energy 6.8 6.5 7.0 6.5 84,535" [ref=e359]:
+                - cell "Last Round" [ref=e360]
+                - cell "$50,000,000" [ref=e361]
+                - cell "10 energy" [ref=e362]
+                - cell "6.8" [ref=e363]
+                - cell "6.5" [ref=e364]
+                - cell "7.0" [ref=e365]
+                - cell "6.5" [ref=e366]
+                - cell "84,535" [ref=e367]
+              - row "The Edge $75,000,000 10 energy 6.8 7.0 7.0 6.8 106,305" [ref=e368]:
+                - cell "The Edge" [ref=e369]
+                - cell "$75,000,000" [ref=e370]
+                - cell "10 energy" [ref=e371]
+                - cell "6.8" [ref=e372]
+                - cell "7.0" [ref=e373]
+                - cell "7.0" [ref=e374]
+                - cell "6.8" [ref=e375]
+                - cell "106,305" [ref=e376]
+              - row "George's** $100,000,000 10 energy 7.3 7.3 7.3 7.3 N/A" [ref=e377]:
+                - cell "George's**" [ref=e378]
+                - cell "$100,000,000" [ref=e379]
+                - cell "10 energy" [ref=e380]
+                - cell "7.3" [ref=e381]
+                - cell "7.3" [ref=e382]
+                - cell "7.3" [ref=e383]
+                - cell "7.3" [ref=e384]
+                - cell "N/A" [ref=e385]
+            - rowgroup
+          - paragraph [ref=e386]: "** After unlocking George's, you will no longer gain any gym exp."
+          - paragraph [ref=e387]
+          - heading "Specialist Gyms & Requirements" [level=2] [ref=e388]: Specialist Gyms & Requirements
+          - paragraph [ref=e389]: To unlock a Specialist Gym, you need to meet certain requirements. If you no longer meet those requirements, you will be kicked out, however, you will keep your membership and can rejoin once you have met the requirements again.
+          - table [ref=e390]:
+            - rowgroup [ref=e391]:
+              - row "Gym name Cost to unlock Energy per train Strength gains Speed gains Defense gains Dex. gains" [ref=e392]:
+                - cell "Gym name" [ref=e393]
+                - cell "Cost to unlock" [ref=e394]
+                - cell "Energy per train" [ref=e395]
+                - cell "Strength gains" [ref=e396]
+                - cell "Speed gains" [ref=e397]
+                - cell "Defense gains" [ref=e398]
+                - cell "Dex. gains" [ref=e399]
+              - row "Balboas Gym $50,000,000 25 - - 7.5 7.5" [ref=e400]:
+                - cell "Balboas Gym" [ref=e401]
+                - cell "$50,000,000" [ref=e402]
+                - cell "25" [ref=e403]
+                - cell "-" [ref=e404]
+                - cell "-" [ref=e405]
+                - cell "7.5" [ref=e406]
+                - cell "7.5" [ref=e407]
+              - 'row "Requirements: Cha Cha''s Unlocked; Defense + Dexterity 25% higher than Strength + Speed." [ref=e408]':
+                - 'cell "Requirements: Cha Cha''s Unlocked; Defense + Dexterity 25% higher than Strength + Speed." [ref=e409]'
+              - row "Frontline Fitness $50,000,000 25 7.5 7.5 - -" [ref=e410]:
+                - cell "Frontline Fitness" [ref=e411]
+                - cell "$50,000,000" [ref=e412]
+                - cell "25" [ref=e413]
+                - cell "7.5" [ref=e414]
+                - cell "7.5" [ref=e415]
+                - cell "-" [ref=e416]
+                - cell "-" [ref=e417]
+              - 'row "Requirements: Cha Cha''s Unlocked; Strength + Speed 25% higher than Dexterity + Defense" [ref=e418]':
+                - 'cell "Requirements: Cha Cha''s Unlocked; Strength + Speed 25% higher than Dexterity + Defense" [ref=e419]'
+              - row "Gym 3000 $100,000,000 50 8.0 - - -" [ref=e420]:
+                - cell "Gym 3000" [ref=e421]
+                - cell "$100,000,000" [ref=e422]
+                - cell "50" [ref=e423]
+                - cell "8.0" [ref=e424]
+                - cell "-" [ref=e425]
+                - cell "-" [ref=e426]
+                - cell "-" [ref=e427]
+              - 'row "Requirements: George''s unlocked; Strength 25% higher than your second highest stat" [ref=e428]':
+                - 'cell "Requirements: George''s unlocked; Strength 25% higher than your second highest stat" [ref=e429]'
+              - row "Mr. Isoyamas $100,000,000 50 - - 8.0 -" [ref=e430]:
+                - cell "Mr. Isoyamas" [ref=e431]
+                - cell "$100,000,000" [ref=e432]
+                - cell "50" [ref=e433]
+                - cell "-" [ref=e434]
+                - cell "-" [ref=e435]
+                - cell "8.0" [ref=e436]
+                - cell "-" [ref=e437]
+              - 'row "Requirements: George''s unlocked; Defense 25% higher than your second highest stat" [ref=e438]':
+                - 'cell "Requirements: George''s unlocked; Defense 25% higher than your second highest stat" [ref=e439]'
+              - row "Total Rebound $100,000,000 50 - 8.0 - -" [ref=e440]:
+                - cell "Total Rebound" [ref=e441]
+                - cell "$100,000,000" [ref=e442]
+                - cell "50" [ref=e443]
+                - cell "-" [ref=e444]
+                - cell "8.0" [ref=e445]
+                - cell "-" [ref=e446]
+                - cell "-" [ref=e447]
+              - 'row "Requirements: George''s unlocked; Speed 25% higher than your second highest stat" [ref=e448]':
+                - 'cell "Requirements: George''s unlocked; Speed 25% higher than your second highest stat" [ref=e449]'
+              - row "Elites $100,000,000 50 - - - 8.0" [ref=e450]:
+                - cell "Elites" [ref=e451]
+                - cell "$100,000,000" [ref=e452]
+                - cell "50" [ref=e453]
+                - cell "-" [ref=e454]
+                - cell "-" [ref=e455]
+                - cell "-" [ref=e456]
+                - cell "8.0" [ref=e457]
+              - 'row "Requirements: George''s unlocked; Dexterity 25% higher than your second highest stat" [ref=e458]':
+                - 'cell "Requirements: George''s unlocked; Dexterity 25% higher than your second highest stat" [ref=e459]'
+              - row "The Sports Science Lab $500,000,000 25 9.0 9.0 9.0 9.0" [ref=e460]:
+                - cell "The Sports Science Lab" [ref=e461]
+                - cell "$500,000,000" [ref=e462]
+                - cell "25" [ref=e463]
+                - cell "9.0" [ref=e464]
+                - cell "9.0" [ref=e465]
+                - cell "9.0" [ref=e466]
+                - cell "9.0" [ref=e467]
+              - 'row "Requirements: Last Round unlocked; Maximum 150 Xanax and Ecstasy combined taken in total.[1]" [ref=e468]':
+                - 'cell "Requirements: Last Round unlocked; Maximum 150 Xanax and Ecstasy combined taken in total.[1]" [ref=e469]':
+                  - text: "Requirements: Last Round unlocked; Maximum 150 Xanax and Ecstasy combined taken in total."
+                  - superscript [ref=e470]:
+                    - link "[1]" [ref=e471] [cursor=pointer]:
+                      - /url: "#cite_note-1"
+              - row "Fight Club $2,147,483,647 10 10.0 10.0 10.0 10.0" [ref=e472]:
+                - cell "Fight Club" [ref=e473]
+                - cell "$2,147,483,647" [ref=e474]
+                - cell "10" [ref=e475]
+                - cell "10.0" [ref=e476]
+                - cell "10.0" [ref=e477]
+                - cell "10.0" [ref=e478]
+                - cell "10.0" [ref=e479]
+              - 'row "Requirements: Well, unknown... \"Membership by invite only\"" [ref=e480]':
+                - 'cell "Requirements: Well, unknown... \"Membership by invite only\"" [ref=e481]'
+          - heading "Jail Gym (aka Crims Gym)" [level=2] [ref=e482]: Jail Gym (aka Crims Gym)
+          - paragraph [ref=e483]: Crims Gym can only be accessed from inside jail, and it is the only gym you can use while you are in jail.
+          - paragraph [ref=e484]:
+            - text: While in jail, you cannot refill your energy bar from
+            - link "Points Building" [ref=e485] [cursor=pointer]:
+              - /url: /wiki/Points_Building
+            - text: . But you can take drugs like
+            - link "Xanax" [ref=e486] [cursor=pointer]:
+              - /url: /wiki/Xanax
+            - text: or use
+            - link "Energy drinks" [ref=e487] [cursor=pointer]:
+              - /url: /wiki/Energy_drinks
+            - text: .
+          - paragraph [ref=e488]: However, faction members can refill energy via the Armory points if they have been granted access to those actions by their faction leadership.
+          - table [ref=e490]:
+            - rowgroup
+            - rowgroup [ref=e491]:
+              - row "Gym name Cost to Unlock Cost of One Train Strength gains Speed gains Defense gains Dex. gains" [ref=e492]:
+                - cell "Gym name" [ref=e493]
+                - cell "Cost to Unlock" [ref=e494]
+                - cell "Cost of One Train" [ref=e495]
+                - cell "Strength gains" [ref=e496]
+                - cell "Speed gains" [ref=e497]
+                - cell "Defense gains" [ref=e498]
+                - cell "Dex. gains" [ref=e499]
+              - row "Jail Gym (Crims Gym) Unlocked automatically 5 energy 3.4 3.4 4.6 -" [ref=e500]:
+                - cell "Jail Gym (Crims Gym)" [ref=e501]
+                - cell "Unlocked automatically" [ref=e502]
+                - cell "5 energy" [ref=e503]
+                - cell "3.4" [ref=e504]
+                - cell "3.4" [ref=e505]
+                - cell "4.6" [ref=e506]
+                - cell "-" [ref=e507]
+            - rowgroup
+          - heading "Related Awards" [level=2] [ref=e508]
+          - paragraph [ref=e509]: There are three honor bars relating to the purchase of gym memberships;
+          - generic [ref=e510]:
+            - button "[Expand]" [ref=e511] [cursor=pointer]
+            - paragraph [ref=e512]: Gyms
+          - heading "Related Books" [level=2] [ref=e513]
+          - table [ref=e514]:
+            - rowgroup [ref=e515]:
+              - row "Image Book Effect" [ref=e516]:
+                - columnheader "Image" [ref=e517] [cursor=pointer]
+                - columnheader "Book" [ref=e518] [cursor=pointer]
+                - columnheader "Effect" [ref=e519] [cursor=pointer]
+            - rowgroup [ref=e520]:
+              - 'row "large.png Book : Self Defense In The Workplace Increases Defense gym gains by 30% for 31 days." [ref=e521]':
+                - cell "large.png" [ref=e522]:
+                  - img "large.png" [ref=e523]
+                - 'cell "Book : Self Defense In The Workplace" [ref=e524]':
+                  - 'link "Book : Self Defense In The Workplace" [ref=e525] [cursor=pointer]':
+                    - /url: /wiki/Book_:_Self_Defense_In_The_Workplace
+                - cell "Increases Defense gym gains by 30% for 31 days." [ref=e526]
+              - 'row "large.png Book : Limbo Lovers 101 Increases Dexterity gym gains by 30% for 31 days." [ref=e527]':
+                - cell "large.png" [ref=e528]:
+                  - img "large.png" [ref=e529]
+                - 'cell "Book : Limbo Lovers 101" [ref=e530]':
+                  - 'link "Book : Limbo Lovers 101" [ref=e531] [cursor=pointer]':
+                    - /url: /wiki/Book_:_Limbo_Lovers_101
+                - cell "Increases Dexterity gym gains by 30% for 31 days." [ref=e532]
+              - 'row "large.png Book : Speed 3 - The Rejected Script Increases Speed gym gains by 30% for 31 days." [ref=e533]':
+                - cell "large.png" [ref=e534]:
+                  - img "large.png" [ref=e535]
+                - 'cell "Book : Speed 3 - The Rejected Script" [ref=e536]':
+                  - 'link "Book : Speed 3 - The Rejected Script" [ref=e537] [cursor=pointer]':
+                    - /url: /wiki/Book_:_Speed_3_-_The_Rejected_Script
+                - cell "Increases Speed gym gains by 30% for 31 days." [ref=e538]
+              - 'row "large.png Book : Gym Grunting - Shouting To Success Increases Strength gym gains by 30% for 31 days." [ref=e539]':
+                - cell "large.png" [ref=e540]:
+                  - img "large.png" [ref=e541]
+                - 'cell "Book : Gym Grunting - Shouting To Success" [ref=e542]':
+                  - 'link "Book : Gym Grunting - Shouting To Success" [ref=e543] [cursor=pointer]':
+                    - /url: /wiki/Book_:_Gym_Grunting_-_Shouting_To_Success
+                - cell "Increases Strength gym gains by 30% for 31 days." [ref=e544]
+              - 'row "large.png Book : Get Hard Or Go Home Increases all gym gains by 20% for 31 days." [ref=e545]':
+                - cell "large.png" [ref=e546]:
+                  - img "large.png" [ref=e547]
+                - 'cell "Book : Get Hard Or Go Home" [ref=e548]':
+                  - 'link "Book : Get Hard Or Go Home" [ref=e549] [cursor=pointer]':
+                    - /url: /wiki/Book_:_Get_Hard_Or_Go_Home
+                - cell "Increases all gym gains by 20% for 31 days." [ref=e550]
+              - 'row "large.png Book : Higher Daddy, Higher! Provides +20% energy regeneration for 31 days." [ref=e551]':
+                - cell "large.png" [ref=e552]:
+                  - img "large.png" [ref=e553]
+                - 'cell "Book : Higher Daddy, Higher!" [ref=e554]':
+                  - 'link "Book : Higher Daddy, Higher!" [ref=e555] [cursor=pointer]':
+                    - /url: /wiki/Book_:_Higher_Daddy,_Higher!
+                - cell "Provides +20% energy regeneration for 31 days." [ref=e556]
+            - rowgroup
+          - paragraph [ref=e557]
+          - heading "Notes" [level=2] [ref=e558]
+          - list [ref=e559]:
+            - listitem [ref=e560]:
+              - text: More information about the certain stats and training is gathered in
+              - link "Battle Stats" [ref=e561] [cursor=pointer]:
+                - /url: /wiki/Battle_Stats
+              - text: page.
+            - listitem [ref=e562]:
+              - text: The Darkk-DemonSkye Gym Guide can be found
+              - link "here" [ref=e563] [cursor=pointer]:
+                - /url: https://www.torn.com/forums.php#/p=threads&t=15908072
+              - text: .
+          - paragraph [ref=e564]
+          - heading "Training Formulas" [level=2] [ref=e565]
+          - paragraph [ref=e566]: "Variables that affect stat growth:"
+          - list [ref=e567]:
+            - listitem [ref=e568]: Happiness
+            - listitem [ref=e569]: Gym (Gym Dots)
+            - listitem [ref=e570]: Energy
+            - listitem [ref=e571]: Faction Upgrades
+            - listitem [ref=e572]: Education
+            - listitem [ref=e573]: Company Specials
+          - heading "Gym Gains Formula" [level=3] [ref=e574]
+          - paragraph [ref=e575]: "Currently the most accurate formula to predict your gym gains is:"
+          - generic [ref=e576]: "*(Modifiers)*(Gym Dots)*(Energy Per Train)*[ (a*ln(Happy+b)+c) * (Stat Total) + d*(Happy+b) + e ]"
+          - paragraph [ref=e577]: "Where a, b, c, d & e are constants, estimated values below:"
+          - list [ref=e578]:
+            - listitem [ref=e579]: a = 3.480061091 x 10^-7
+            - listitem [ref=e580]: b = 250
+            - listitem [ref=e581]: c = 3.091619094 x 10^-6
+            - listitem [ref=e582]: d = 6.82775184551527 x 10^-5
+            - listitem [ref=e583]: e = -0.0301431777
+          - paragraph [ref=e584]:
+            - text: More information about this can be found in
+            - link "this thread" [ref=e585] [cursor=pointer]:
+              - /url: https://www.torn.com/forums.php#!p=threads&f=61&t=16003284&b=0&a=0
+            - text: by
+            - link "Vladar" [ref=e586] [cursor=pointer]:
+              - /url: https://www.torn.com/profiles.php?XID=1996140
+          - heading "Happy Loss" [level=3] [ref=e587]
+          - paragraph [ref=e588]: With each train, you will lose some happy. The amount of happy loss is 40-60% of the energy used per train. The happy loss wouldn't change with the source of the energy you used for training (natural/drugs/energy drinks/refills).
+          - generic [ref=e589]: "*Ex: (5 x 10 E trains) You used 50 energy and 27 happiness training your defense 5 times in Force Training increasing it by xxxxx to xxxxxxx"
+          - heading "Historical Notes" [level=4] [ref=e590]
+          - paragraph [ref=e591]: When the cap on happiness was raised to 99,999 the formula changed entirely, this was the most accurate formula in the old system.
+          - paragraph [ref=e592]: "The most accurate formula at the moment, according to Darkkk's Guide is:"
+          - generic [ref=e593]: "*((Gym Dots * 4) * ((0.00019106 * Stat) + (0.00226263 * Happy) + 0.55)) * (1 + Steadfast + Education Bonus) / 150 * Energy Used"
+          - paragraph [ref=e594]: "**with the 0.006% - 0.169% margin of error.**"
+          - paragraph [ref=e595]
+          - heading "Gym Training Stat Cap Removal" [level=2] [ref=e596]
+          - paragraph [ref=e597]:
+            - text: On 02/08/22 Chedburn announced the
+            - link "Stat cap removal" [ref=e598] [cursor=pointer]:
+              - /url: https://www.torn.com/forums.php#/p=threads&t=16288778
+            - text: ":"
+          - paragraph [ref=e599]: After many months of careful consideration, we have decided to remove the gym 'stat cap', a limit that halts the growth of gym gains after reaching 50,000,000 in a stat. Beyond this point, gym gains will now continue to increase at a steadily decreasing rate, allowing for controlled, exponential growth more comparable with the gains received from stat enhancers.
+          - paragraph [ref=e600]: Everyone should now notice their gym gains increasing slightly with every training session, however, this change only makes a meaningful difference to those who have stats in the multiple billions. Heavy stat enhancer usage still provides significant gains far quicker than anything else can when stats are in the billions, but gym training now has some relevance again for those who had previously abandoned it.
+          - paragraph [ref=e601]: I have provided some rough examples to express the scale of change that's happening. Instead of stat growth stagnating before 5b stats, some level of limited growth continues. We define heavy training as using 1500e every day with the happiness of a fully upgraded PI in George's gym, but without Steadfast.
+          - list [ref=e602]:
+            - listitem [ref=e603]: Heavily training a 50m stat will yield 211.75% monthly growth, the same as before.
+            - listitem [ref=e604]: Heavily training a 100m stat will now yield 108.05% monthly growth instead of 103.35%.
+            - listitem [ref=e605]: Heavily training a 1b stat will now yield 12.87% monthly growth instead of 10.33%.
+            - listitem [ref=e606]: Heavily training a 5b stat will now yield 4.47% monthly growth instead of 2.07%.
+            - listitem [ref=e607]: Heavily training a 10b stat will now yield 3.37% monthly growth instead of 1.03%.
+            - listitem [ref=e608]: Heavily training a 50b stat will now yield 2.40% monthly growth instead of 0.21%.
+            - listitem [ref=e609]: Heavily training a 100b stat will now yield 2.24% monthly growth instead of 0.10%.
+            - listitem [ref=e610]: Heavily training a 500b stat will now yield 2.03% monthly growth instead of 0.02%.
+            - listitem [ref=e611]: Heavily training a 1t stat will now yield 1.97% monthly growth instead of 0.01%.
+          - paragraph [ref=e612]: There are several strong reasons for making this change...
+          - list [ref=e613]:
+            - listitem [ref=e614]: Reducing the dependency on having to afford stat enhancers for end-game stat building.
+            - listitem [ref=e615]: More variation of player stats at the end-game for those who don't have access to stat enhancers.
+            - listitem [ref=e616]: The satisfaction of continued growth of gains per train, even if the difference isn't significantly meaningful to most.
+          - paragraph [ref=e617]:
+            - text: For further reading please also see the
+            - link "related newspaper article" [ref=e618] [cursor=pointer]:
+              - /url: https://www.torn.com/newspaper.php#!/articles/2336
+          - paragraph [ref=e619]
+          - heading "Patch History" [level=2] [ref=e620]
+          - generic [ref=e621]:
+            - generic [ref=e622]: "Released prior to Patch list #1"
+            - separator [ref=e623]
+            - generic [ref=e624]:
+              - term [ref=e626]:
+                - 'link "Patch list #276 : 14/02/23" [ref=e627] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16318794
+              - list [ref=e628]:
+                - listitem [ref=e629]: Added gym logo button animations upon hover / tap
+              - term [ref=e631]:
+                - 'link "Stat cap removal : 02/08/22" [ref=e632] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16288778
+              - list [ref=e633]:
+                - listitem [ref=e634]: After many months of careful consideration, we have decided to remove the gym 'stat cap', a limit that halts the growth of gym gains after reaching 50,000,000 in a stat. Beyond this point, gym gains will now continue to increase at a steadily decreasing rate, allowing for controlled, exponential growth more comparable with the gains received from stat enhancers.
+                - listitem [ref=e635]: Everyone should now notice their gym gains increasing slightly with every training session, however, this change only makes a meaningful difference to those who have stats in the multiple billions. Heavy stat enhancer usage still provides significant gains far quicker than anything else can when stats are in the billions, but gym training now has some relevance again for those who had previously abandoned it.
+              - term [ref=e637]:
+                - 'link "Patch list #174 : 29/12/20" [ref=e638] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16203384
+              - list [ref=e639]:
+                - listitem [ref=e640]: Added new modifier Addiction Mitigation which reduces all effects of addiction.
+              - term [ref=e642]:
+                - 'link "Patch list #144 : 02/06/20" [ref=e643] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16166133
+              - list [ref=e644]:
+                - listitem [ref=e645]: Changed gym gains to show only 2 decimal places instead of 4.
+              - term [ref=e647]:
+                - 'link "Patch list #124 : 14/01/20" [ref=e648] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16138978
+              - list [ref=e649]:
+                - listitem [ref=e650]: Added ability to set and save gym train quantity as '0'.
+              - term [ref=e652]:
+                - 'link "Patch list #112 : 24/09/19" [ref=e653] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16120202
+              - list [ref=e654]:
+                - listitem [ref=e655]: Added gym link after using Ecstasy.
+              - term [ref=e657]:
+                - 'link "Patch list #57 : 21/08/18" [ref=e658] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16057229
+              - list [ref=e659]:
+                - listitem [ref=e660]: Added special notices to gyms with additional requirements (I.e. SSL).
+                - listitem [ref=e661]: Changed font style for the successful message after train in the gym.
+              - term [ref=e663]:
+                - 'link "Patch list #56 : 14/08/18" [ref=e664] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16056224
+              - list [ref=e665]:
+                - listitem [ref=e666]: Released Gym rebuild.
+              - term [ref=e668]:
+                - 'link "Patch list #2 : 27/06/17" [ref=e669] [cursor=pointer]':
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16011154
+              - list [ref=e670]:
+                - listitem [ref=e671]: Disabled the gym buttons if there's not enough energy to complete at least one train
+          - paragraph [ref=e672]
+          - separator [ref=e673]
+          - table [ref=e674]:
+            - rowgroup [ref=e675]:
+              - row "City" [ref=e676]:
+                - cell "City" [ref=e677]:
+                  - link "City" [ref=e679] [cursor=pointer]:
+                    - /url: /wiki/City
+              - row "West Side Education · Your Gym · Travel agency" [ref=e680]:
+                - rowheader "West Side" [ref=e681]
+                - cell "Education · Your Gym · Travel agency" [ref=e682]:
+                  - link "Education" [ref=e683] [cursor=pointer]:
+                    - /url: /wiki/Education
+                  - text: · Your Gym ·
+                  - link "Travel agency" [ref=e684] [cursor=pointer]:
+                    - /url: /wiki/Travel
+              - row "North Side Auction House · Bazaar Directory · Church · Item Market · Points Building · Points Market" [ref=e685]:
+                - rowheader "North Side" [ref=e686]
+                - cell "Auction House · Bazaar Directory · Church · Item Market · Points Building · Points Market" [ref=e687]:
+                  - link "Auction House" [ref=e688] [cursor=pointer]:
+                    - /url: /wiki/Auction_House
+                  - text: ·
+                  - link "Bazaar Directory" [ref=e689] [cursor=pointer]:
+                    - /url: /wiki/Bazaar_Directory
+                  - text: ·
+                  - link "Church" [ref=e690] [cursor=pointer]:
+                    - /url: /wiki/Church
+                  - text: ·
+                  - link "Item Market" [ref=e691] [cursor=pointer]:
+                    - /url: /wiki/Item_Market
+                  - text: ·
+                  - link "Points Building" [ref=e692] [cursor=pointer]:
+                    - /url: /wiki/Points#Points_Building
+                  - text: ·
+                  - link "Points Market" [ref=e693] [cursor=pointer]:
+                    - /url: /wiki/Points#Points_Market
+              - row "Red-Light Casino · Dump · Loan Shark · Missions · Raceway" [ref=e694]:
+                - rowheader "Red-Light" [ref=e695]
+                - cell "Casino · Dump · Loan Shark · Missions · Raceway" [ref=e696]:
+                  - link "Casino" [ref=e697] [cursor=pointer]:
+                    - /url: /wiki/Casino
+                  - text: ·
+                  - link "Dump" [ref=e698] [cursor=pointer]:
+                    - /url: /wiki/Dump
+                  - text: ·
+                  - link "Loan Shark" [ref=e699] [cursor=pointer]:
+                    - /url: /wiki/Loan_Shark
+                  - text: ·
+                  - link "Missions" [ref=e700] [cursor=pointer]:
+                    - /url: /wiki/Mission
+                  - text: ·
+                  - link "Raceway" [ref=e701] [cursor=pointer]:
+                    - /url: /wiki/Race_Track
+              - row "Residential Estate Agents · Your Property" [ref=e702]:
+                - rowheader "Residential" [ref=e703]
+                - cell "Estate Agents · Your Property" [ref=e704]:
+                  - link "Estate Agents" [ref=e705] [cursor=pointer]:
+                    - /url: /wiki/Estate_Agents
+                  - text: ·
+                  - link "Your Property" [ref=e706] [cursor=pointer]:
+                    - /url: /wiki/Properties
+              - row "City Center Chronicle Archives · City Hall · Community Center · Hospital · Jail · Museum · Player Committee · Staff · Visitor Center" [ref=e707]:
+                - rowheader "City Center" [ref=e708]
+                - cell "Chronicle Archives · City Hall · Community Center · Hospital · Jail · Museum · Player Committee · Staff · Visitor Center" [ref=e709]:
+                  - link "Chronicle Archives" [ref=e710] [cursor=pointer]:
+                    - /url: /wiki/Newspaper#Archive
+                  - text: ·
+                  - link "City Hall" [ref=e711] [cursor=pointer]:
+                    - /url: /wiki/City_Hall
+                  - text: ·
+                  - link "Community Center" [ref=e712] [cursor=pointer]:
+                    - /url: /wiki/TC_Community
+                  - text: ·
+                  - link "Hospital" [ref=e713] [cursor=pointer]:
+                    - /url: /wiki/Hospital
+                  - text: ·
+                  - link "Jail" [ref=e714] [cursor=pointer]:
+                    - /url: /wiki/Jail
+                  - text: ·
+                  - link "Museum" [ref=e715] [cursor=pointer]:
+                    - /url: /wiki/Museum
+                  - text: ·
+                  - link "Player Committee" [ref=e716] [cursor=pointer]:
+                    - /url: /wiki/Committee
+                  - text: ·
+                  - link "Staff" [ref=e717] [cursor=pointer]:
+                    - /url: /wiki/Staff
+                  - text: ·
+                  - link "Visitor Center" [ref=e718] [cursor=pointer]:
+                    - /url: /wiki/Main_Page
+              - row "Financial Bank · Donator House · Messaging Inc · Stock Market" [ref=e719]:
+                - rowheader "Financial" [ref=e720]
+                - cell "Bank · Donator House · Messaging Inc · Stock Market" [ref=e721]:
+                  - link "Bank" [ref=e722] [cursor=pointer]:
+                    - /url: /wiki/City_Bank
+                  - text: ·
+                  - link "Donator House" [ref=e723] [cursor=pointer]:
+                    - /url: /wiki/Donator
+                  - text: ·
+                  - link "Messaging Inc" [ref=e724] [cursor=pointer]:
+                    - /url: /wiki/Newspaper#Classified_Ads
+                  - text: ·
+                  - link "Stock Market" [ref=e725] [cursor=pointer]:
+                    - /url: /wiki/Stock_Market
+              - row "East Side Big Al's Gun Shop · Bits 'n' Bobs · Cyber Force · Docks · Jewelry Store · Nikeh Sports · Pawn Shop · Pharmacy · Post Office · Print Store · Recycling Center · Super Store · Sweet Shop · TC Clothing" [ref=e726]:
+                - rowheader "East Side" [ref=e727]
+                - cell "Big Al's Gun Shop · Bits 'n' Bobs · Cyber Force · Docks · Jewelry Store · Nikeh Sports · Pawn Shop · Pharmacy · Post Office · Print Store · Recycling Center · Super Store · Sweet Shop · TC Clothing" [ref=e728]:
+                  - link "Big Al's Gun Shop" [ref=e729] [cursor=pointer]:
+                    - /url: /wiki/Big_Al%27s_Gun_Shop
+                  - text: ·
+                  - link "Bits 'n' Bobs" [ref=e730] [cursor=pointer]:
+                    - /url: /wiki/Bits_%27n%27_Bobs
+                  - text: ·
+                  - link "Cyber Force" [ref=e731] [cursor=pointer]:
+                    - /url: /wiki/Cyber_Force
+                  - text: ·
+                  - link "Docks" [ref=e732] [cursor=pointer]:
+                    - /url: /wiki/Torn_Docks
+                  - text: ·
+                  - link "Jewelry Store" [ref=e733] [cursor=pointer]:
+                    - /url: /wiki/Jewelry_store
+                  - text: ·
+                  - link "Nikeh Sports" [ref=e734] [cursor=pointer]:
+                    - /url: /wiki/Nikeh_Sports
+                  - text: ·
+                  - link "Pawn Shop" [ref=e735] [cursor=pointer]:
+                    - /url: /wiki/Pawn_Shop
+                  - text: ·
+                  - link "Pharmacy" [ref=e736] [cursor=pointer]:
+                    - /url: /wiki/Pharmacy
+                  - text: ·
+                  - link "Post Office" [ref=e737] [cursor=pointer]:
+                    - /url: /wiki/Post_Office
+                  - text: ·
+                  - link "Print Store" [ref=e738] [cursor=pointer]:
+                    - /url: /wiki/Print_Store
+                  - text: ·
+                  - link "Recycling Center" [ref=e739] [cursor=pointer]:
+                    - /url: /wiki/Recycling_Center
+                  - text: ·
+                  - link "Super Store" [ref=e740] [cursor=pointer]:
+                    - /url: /wiki/Super_Store
+                  - text: ·
+                  - link "Sweet Shop" [ref=e741] [cursor=pointer]:
+                    - /url: /wiki/Sally%27s_Sweet_Shop
+                  - text: ·
+                  - link "TC Clothing" [ref=e742] [cursor=pointer]:
+                    - /url: /wiki/TC_Clothing
+              - row [ref=e743]:
+                - cell [ref=e744]
+          - paragraph [ref=e745]
+          - list [ref=e747]:
+            - listitem [ref=e748]:
+              - link "Jump up" [ref=e750] [cursor=pointer]:
+                - /url: "#cite_ref-1"
+                - text: ↑
+              - generic [ref=e751]:
+                - text: Flare (01/01/2025)
+                - link "Updating SSL requirements" [ref=e752] [cursor=pointer]:
+                  - /url: https://www.torn.com/forums.php#/p=threads&t=16441365&to=2552040
+      - contentinfo [ref=e754]:
+        - list [ref=e755]:
+          - listitem [ref=e756]: This page was last edited on 16 January 2026, at 15:19.
+          - listitem [ref=e757]: This page has been accessed 371,978 times.
+        - list [ref=e758]:
+          - listitem [ref=e759]:
+            - link "Privacy policy" [ref=e760] [cursor=pointer]:
+              - /url: /wiki/TornWiki:Privacy_policy
+          - listitem [ref=e761]:
+            - link "About Torncity WIKI - The official help and support guide" [ref=e762] [cursor=pointer]:
+              - /url: /wiki/TornWiki:About
+          - listitem [ref=e763]:
+            - link "Disclaimers" [ref=e764] [cursor=pointer]:
+              - /url: /wiki/TornWiki:General_disclaimer
+  - text: 

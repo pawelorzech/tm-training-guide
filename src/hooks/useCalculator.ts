@@ -4,7 +4,7 @@ import type { CalculatorState, CalculatorResults, EnergySources } from '@/types/
 import type { TornUserData } from '@/types/torn-api';
 import { calculateGymGain, calculateHappyContribution, compareFhcUseVsSell, compareStatEnhancer, projectDailyGain, daysToMilestone } from '@/lib/formulas';
 import { generateRecommendations } from '@/lib/recommendations';
-import { DEFAULT_PRICES, STAT_MILESTONES, API_GYM_ID_TO_DOTS } from '@/lib/constants';
+import { DEFAULT_PRICES, STAT_MILESTONES, getGymGainById } from '@/lib/constants';
 
 const defaultEnergySources: EnergySources = {
   natural: true, xanax: false, pointRefill: false, fhc: false, energyCans: 0,
@@ -29,8 +29,6 @@ export function useCalculator(apiData: TornUserData | null) {
 
   useEffect(() => {
     if (!apiData) return;
-    const gymDots = API_GYM_ID_TO_DOTS[apiData.gym.active_gym] ?? 20;
-    // Pick the highest stat as the "current stat" being trained
     const stats = apiData.battlestats;
     const statValues = [
       { stat: 'STR' as const, value: stats.strength },
@@ -39,6 +37,7 @@ export function useCalculator(apiData: TornUserData | null) {
       { stat: 'DEX' as const, value: stats.dexterity },
     ];
     const highest = statValues.reduce((a, b) => a.value > b.value ? a : b);
+    const gymDots = getGymGainById(apiData.gym.active_gym, highest.stat);
 
     setState(prev => ({
       ...prev,

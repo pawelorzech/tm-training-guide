@@ -2,21 +2,8 @@
 
 import { GYMS } from '@/lib/constants';
 
-const FIRST_EIGHT_GYMS = GYMS.slice(0, 8);
-
-function DotsDisplay({ dots }: { dots: number }) {
-  const full = Math.floor(dots);
-  const half = dots % 1 >= 0.5;
-  return (
-    <span className="inline-flex items-center gap-0.5">
-      {Array.from({ length: full }).map((_, i) => (
-        <span key={i} className="text-torn-green text-xs">●</span>
-      ))}
-      {half && <span className="text-torn-green/50 text-xs">◐</span>}
-      <span className="ml-1 text-text-secondary text-xs">({dots})</span>
-    </span>
-  );
-}
+// First 8 gyms = all light-weight (5E per train)
+const BEGINNER_GYMS = GYMS.filter(g => g.stage === 'light');
 
 export function Section01_GettingStarted() {
   return (
@@ -55,21 +42,19 @@ export function Section01_GettingStarted() {
               <tr className="bg-bg-secondary border-b border-text-secondary/20">
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">#</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Gym</th>
-                <th className="text-left px-4 py-3 text-text-secondary font-medium">Dots</th>
+                <th className="text-left px-4 py-3 text-text-secondary font-medium">Best Gain</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Unlock Requirement</th>
               </tr>
             </thead>
             <tbody>
-              {FIRST_EIGHT_GYMS.map((gym, index) => (
+              {BEGINNER_GYMS.map((gym, index) => (
                 <tr
                   key={gym.id}
                   className={`border-b border-text-secondary/10 ${index % 2 === 0 ? 'bg-bg-card' : 'bg-bg-secondary'} hover:bg-bg-secondary/80 transition-colors`}
                 >
                   <td className="px-4 py-3 text-text-secondary">{gym.id}</td>
                   <td className="px-4 py-3 font-medium text-text-primary">{gym.name}</td>
-                  <td className="px-4 py-3">
-                    <DotsDisplay dots={gym.dots} />
-                  </td>
+                  <td className="px-4 py-3 text-torn-green font-medium">{Math.max(gym.gains.str, gym.gains.def, gym.gains.spd, gym.gains.dex)}x</td>
                   <td className="px-4 py-3 text-text-secondary">{gym.unlock}</td>
                 </tr>
               ))}
@@ -77,7 +62,7 @@ export function Section01_GettingStarted() {
           </table>
         </div>
         <p className="text-xs text-text-secondary mt-2">
-          More gyms unlock as your stats grow — there are 33 gyms total, up to endgame gyms like <strong className="text-torn-green">George&apos;s</strong> (20 dots) and <strong className="text-torn-green">Balboas</strong> (39 dots).
+          More gyms unlock as you gain gym EXP (earned by training). There are 33 gyms total, up to endgame specialists like <strong className="text-torn-green">George&apos;s</strong> (7.3x gains) and <strong className="text-torn-green">Balboas</strong> (7.5x DEF/DEX).
         </p>
       </div>
 

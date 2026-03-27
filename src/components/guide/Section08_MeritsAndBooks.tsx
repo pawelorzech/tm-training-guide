@@ -205,9 +205,10 @@ export function Section08_MeritsAndBooks({
           </p>
           <p>
             The most important course is{' '}
-            <strong className="text-torn-green">Sports Science</strong> — it gives{' '}
-            <strong>+2% gym gains and +2% passive stats</strong>. Completing the full curriculum can
-            add approximately <strong>+10% gym efficiency</strong>.
+            <strong className="text-torn-green">Sports Science</strong> — the Bachelor&apos;s degree gives{' '}
+            <strong>+1% all gym gains</strong>, plus individual stat courses give +1% each. Passive stat
+            bonuses (+2% STR/SPD or +2% DEF/DEX) come from separate courses. Total gym gain bonus from
+            all education is roughly <strong>+2-5%</strong> depending on stat.
           </p>
           <p className="text-text-secondary text-sm">
             These bonuses are small individually, but permanent and free — just time-gated.

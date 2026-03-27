@@ -1,27 +1,44 @@
-// Simplified gym list for the guide. "dots" is the quality rating used in the formula.
-// API gym IDs (used by Torn API) are mapped separately in API_GYM_ID_TO_DOTS.
-// Stage 1-2 gyms train all 4 stats. Stage 3+ gyms specialize.
+// Gym data verified against Torn Wiki (wiki.torn.com/wiki/Gym).
+// "gains" = per-stat gain multiplier from wiki (e.g. 7.5 for Balboas DEF).
+// Standard gyms unlock via gym EXP (earned by training). Specialist gyms have stat ratio requirements.
+// Energy per train: Light=5E, Middle/Heavy=10E, Balboas/Frontline/SSL=25E, Single-stat specialists=50E.
 export const GYMS = [
-  // Stage 1: Beginner gyms
-  { id: 1, name: "Premier Fitness", dots: 2.0, unlock: "Default", unlockType: "none" as const, unlockValue: 0, stage: 1 },
-  { id: 2, name: "Average Joe's", dots: 3.0, unlock: "Any stat > 100", unlockType: "anyStat" as const, unlockValue: 100, stage: 1 },
-  { id: 3, name: "Woody's Workout Club", dots: 4.0, unlock: "Any stat > 500", unlockType: "anyStat" as const, unlockValue: 500, stage: 1 },
-  { id: 4, name: "Beach Bods", dots: 5.0, unlock: "Any stat > 1,000", unlockType: "anyStat" as const, unlockValue: 1_000, stage: 1 },
-  { id: 5, name: "Silver Gym", dots: 6.0, unlock: "Any stat > 2,500", unlockType: "anyStat" as const, unlockValue: 2_500, stage: 1 },
-  { id: 8, name: "Global Gym", dots: 7.0, unlock: "Any stat > 25,000", unlockType: "anyStat" as const, unlockValue: 25_000, stage: 1 },
-  // Stage 2: Intermediate
-  { id: 16, name: "Deep Burn", dots: 10.0, unlock: "Various", unlockType: "anyStat" as const, unlockValue: 100_000, stage: 2 },
-  // Stage 3: Advanced (single-stat focus)
-  { id: 24, name: "George's", dots: 20.0, unlock: "Any stat > 50M", unlockType: "anyStat" as const, unlockValue: 50_000_000, stage: 3 },
-  // Stage 4: Endgame (specialized)
-  { id: 25, name: "Balboas Gym", dots: 39.0, unlock: "Total stats > 1B", unlockType: "totalStats" as const, unlockValue: 1_000_000_000, stage: 4, stats: ["DEF", "DEX"] },
-  { id: 26, name: "Frontline Fitness", dots: 39.0, unlock: "Total stats > 1B", unlockType: "totalStats" as const, unlockValue: 1_000_000_000, stage: 4, stats: ["STR", "SPD"] },
-  { id: 27, name: "Gym 3000", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["STR"] },
-  { id: 28, name: "Mr. Isoyamas", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["DEF"] },
-  { id: 29, name: "Total Rebound", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["SPD"] },
-  { id: 30, name: "Elites", dots: 42.0, unlock: "Advanced", unlockType: "specificStat" as const, unlockValue: 2_000_000_000, stage: 4, stats: ["DEX"] },
-  { id: 31, name: "Sports Science Lab", dots: 47.0, unlock: "Advanced", unlockType: "totalStats" as const, unlockValue: 5_000_000_000, stage: 4, sslRestriction: true },
-  { id: 32, name: "Unknown", dots: 52.0, unlock: "Endgame", unlockType: "totalStats" as const, unlockValue: 10_000_000_000, stage: 4 },
+  // Light-Weight (5E per train)
+  { id: 1, name: "Premier Fitness", gains: { str: 2.0, spd: 2.0, def: 2.0, dex: 2.0 }, energy: 5, unlock: "Default (free)", stage: "light" as const },
+  { id: 2, name: "Average Joes", gains: { str: 2.4, spd: 2.4, def: 2.8, dex: 2.4 }, energy: 5, unlock: "$100 + gym EXP", stage: "light" as const },
+  { id: 3, name: "Woody's Workout", gains: { str: 2.7, spd: 3.2, def: 3.0, dex: 2.7 }, energy: 5, unlock: "$250 + gym EXP", stage: "light" as const },
+  { id: 4, name: "Beach Bods", gains: { str: 3.2, spd: 3.2, def: 3.2, dex: 0 }, energy: 5, unlock: "$500 + gym EXP", stage: "light" as const },
+  { id: 5, name: "Silver Gym", gains: { str: 3.4, spd: 3.6, def: 3.4, dex: 3.2 }, energy: 5, unlock: "$1K + gym EXP", stage: "light" as const },
+  { id: 6, name: "Pour Femme", gains: { str: 3.4, spd: 3.6, def: 3.6, dex: 3.8 }, energy: 5, unlock: "$2.5K + gym EXP", stage: "light" as const },
+  { id: 7, name: "Davies Den", gains: { str: 3.7, spd: 0, def: 3.7, dex: 3.7 }, energy: 5, unlock: "$5K + gym EXP", stage: "light" as const },
+  { id: 8, name: "Global Gym", gains: { str: 4.0, spd: 4.0, def: 4.0, dex: 4.0 }, energy: 5, unlock: "$10K + gym EXP", stage: "light" as const },
+  // Middle-Weight (10E per train)
+  { id: 9, name: "Knuckle Heads", gains: { str: 4.8, spd: 4.4, def: 4.0, dex: 4.2 }, energy: 10, unlock: "$50K + gym EXP", stage: "middle" as const },
+  { id: 10, name: "Pioneer Fitness", gains: { str: 4.4, spd: 4.6, def: 4.8, dex: 4.4 }, energy: 10, unlock: "$100K + gym EXP", stage: "middle" as const },
+  { id: 11, name: "Anabolic Anomalies", gains: { str: 5.0, spd: 4.6, def: 5.2, dex: 4.6 }, energy: 10, unlock: "$250K + gym EXP", stage: "middle" as const },
+  { id: 12, name: "Core", gains: { str: 5.0, spd: 5.2, def: 5.0, dex: 5.0 }, energy: 10, unlock: "$500K + gym EXP", stage: "middle" as const },
+  { id: 13, name: "Racing Fitness", gains: { str: 5.0, spd: 5.4, def: 4.8, dex: 5.2 }, energy: 10, unlock: "$1M + gym EXP", stage: "middle" as const },
+  { id: 14, name: "Complete Cardio", gains: { str: 5.5, spd: 5.7, def: 5.5, dex: 5.2 }, energy: 10, unlock: "$2M + gym EXP", stage: "middle" as const },
+  { id: 15, name: "Legs, Bums and Tums", gains: { str: 0, spd: 5.5, def: 5.5, dex: 5.7 }, energy: 10, unlock: "$3M + gym EXP", stage: "middle" as const },
+  { id: 16, name: "Deep Burn", gains: { str: 6.0, spd: 6.0, def: 6.0, dex: 6.0 }, energy: 10, unlock: "$5M + gym EXP", stage: "middle" as const },
+  // Heavy-Weight (10E per train)
+  { id: 17, name: "Apollo Gym", gains: { str: 6.0, spd: 6.2, def: 6.4, dex: 6.2 }, energy: 10, unlock: "$7.5M + gym EXP", stage: "heavy" as const },
+  { id: 18, name: "Gun Shop", gains: { str: 6.5, spd: 6.4, def: 6.2, dex: 6.2 }, energy: 10, unlock: "$10M + gym EXP", stage: "heavy" as const },
+  { id: 19, name: "Force Training", gains: { str: 6.4, spd: 6.5, def: 6.4, dex: 6.8 }, energy: 10, unlock: "$15M + gym EXP", stage: "heavy" as const },
+  { id: 20, name: "Cha Cha's", gains: { str: 6.4, spd: 6.4, def: 6.8, dex: 7.0 }, energy: 10, unlock: "$20M + gym EXP", stage: "heavy" as const },
+  { id: 21, name: "Atlas", gains: { str: 7.0, spd: 6.4, def: 6.4, dex: 6.5 }, energy: 10, unlock: "$30M + gym EXP", stage: "heavy" as const },
+  { id: 22, name: "Last Round", gains: { str: 6.8, spd: 6.5, def: 7.0, dex: 6.5 }, energy: 10, unlock: "$50M + gym EXP", stage: "heavy" as const },
+  { id: 23, name: "The Edge", gains: { str: 6.8, spd: 7.0, def: 7.0, dex: 6.8 }, energy: 10, unlock: "$75M + gym EXP", stage: "heavy" as const },
+  { id: 24, name: "George's", gains: { str: 7.3, spd: 7.3, def: 7.3, dex: 7.3 }, energy: 10, unlock: "$100M + gym EXP (last standard gym)", stage: "heavy" as const },
+  // Specialist Gyms (stat ratio requirements)
+  { id: 25, name: "Balboas Gym", gains: { str: 0, spd: 0, def: 7.5, dex: 7.5 }, energy: 25, unlock: "Cha Cha's unlocked; DEF+DEX 25% > STR+SPD", stage: "specialist" as const, stats: ["DEF", "DEX"] },
+  { id: 26, name: "Frontline Fitness", gains: { str: 7.5, spd: 7.5, def: 0, dex: 0 }, energy: 25, unlock: "Cha Cha's unlocked; STR+SPD 25% > DEF+DEX", stage: "specialist" as const, stats: ["STR", "SPD"] },
+  { id: 27, name: "Gym 3000", gains: { str: 8.0, spd: 0, def: 0, dex: 0 }, energy: 50, unlock: "George's unlocked; STR 25% > 2nd highest stat", stage: "specialist" as const, stats: ["STR"] },
+  { id: 28, name: "Mr. Isoyamas", gains: { str: 0, spd: 0, def: 8.0, dex: 0 }, energy: 50, unlock: "George's unlocked; DEF 25% > 2nd highest stat", stage: "specialist" as const, stats: ["DEF"] },
+  { id: 29, name: "Total Rebound", gains: { str: 0, spd: 8.0, def: 0, dex: 0 }, energy: 50, unlock: "George's unlocked; SPD 25% > 2nd highest stat", stage: "specialist" as const, stats: ["SPD"] },
+  { id: 30, name: "Elites", gains: { str: 0, spd: 0, def: 0, dex: 8.0 }, energy: 50, unlock: "George's unlocked; DEX 25% > 2nd highest stat", stage: "specialist" as const, stats: ["DEX"] },
+  { id: 31, name: "Sports Science Lab", gains: { str: 9.0, spd: 9.0, def: 9.0, dex: 9.0 }, energy: 25, unlock: "Last Round unlocked; max 150 Xanax+Ecstasy total", stage: "specialist" as const, sslRestriction: true },
+  { id: 32, name: "Fight Club", gains: { str: 10.0, spd: 10.0, def: 10.0, dex: 10.0 }, energy: 10, unlock: "Membership by invite only", stage: "specialist" as const },
 ] as const;
 
 export type Gym = (typeof GYMS)[number];
@@ -115,23 +132,29 @@ export const DEFAULT_PRICES = {
   pointRefill: 845_000,
 };
 
-// Map Torn API gym IDs to dots values for the formula.
-// API IDs from https://api.torn.com/v2/torn/gyms
-export const API_GYM_ID_TO_DOTS: Record<number, number> = {
-  1: 2.0, 2: 3.0, 3: 4.0, 4: 5.0, 5: 6.0, 6: 6.0, 7: 6.0, 8: 7.0,
-  9: 8.0, 10: 8.0, 11: 8.0, 12: 8.0, 13: 9.0, 14: 9.0, 15: 9.0, 16: 10.0,
-  17: 10.0, 18: 10.0, 19: 11.0, 20: 11.0, 21: 11.0, 22: 11.5, 23: 11.5,
-  24: 20.0,  // George's
-  25: 39.0,  // Balboas Gym (DEF/DEX)
-  26: 39.0,  // Frontline Fitness (STR/SPD)
-  27: 42.0,  // Gym 3000 (STR)
-  28: 42.0,  // Mr. Isoyamas (DEF)
-  29: 42.0,  // Total Rebound (SPD)
-  30: 42.0,  // Elites (DEX)
-  31: 47.0,  // Sports Science Lab
-  32: 52.0,  // Unknown (endgame)
-  33: 5.0,   // Jail Gym
-};
+// Look up the gain multiplier for a specific stat from a gym.
+// Falls back to max gain across all stats if stat not trained at that gym.
+const STAT_TO_GAIN_KEY = { STR: 'str', DEF: 'def', SPD: 'spd', DEX: 'dex' } as const;
+
+export function getGymGain(gymId: number, stat: 'STR' | 'DEF' | 'SPD' | 'DEX'): number {
+  const gym = GYMS.find(g => g.id === gymId);
+  if (!gym) return 7.3; // fallback to George's level
+  const key = STAT_TO_GAIN_KEY[stat];
+  const gain = gym.gains[key];
+  if (gain > 0) return gain;
+  // If gym doesn't train this stat, return max available gain
+  return Math.max(gym.gains.str, gym.gains.spd, gym.gains.def, gym.gains.dex);
+}
+
+// Jail Gym (API ID 33) is not in GYMS array — add as special case
+export function getGymGainById(gymApiId: number, stat: 'STR' | 'DEF' | 'SPD' | 'DEX'): number {
+  if (gymApiId === 33) {
+    // Jail Gym: STR=3.4, SPD=3.4, DEF=4.6, DEX=0
+    const jailGains = { STR: 3.4, DEF: 4.6, SPD: 3.4, DEX: 0 };
+    return jailGains[stat] || 3.4;
+  }
+  return getGymGain(gymApiId, stat);
+}
 
 export const STAT_MILESTONES = [
   100_000_000,

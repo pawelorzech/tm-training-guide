@@ -50,9 +50,9 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
           <div className="bg-bg-card border border-blue-600/30 rounded-xl p-4">
             <p className="font-semibold text-blue-600 mb-2">Gym_Dots</p>
             <p className="text-sm text-text-secondary leading-relaxed">
-              The quality rating of your current gym. Ranges from 2 dots (Premier Fitness) up to 52
-              for the best endgame gyms. This multiplies your entire gain linearly — switching from a 10-dot to a
-              20-dot gym literally doubles your output. Always train in the best gym you can access.
+              The gain multiplier of your current gym for the stat you&apos;re training. Ranges from 2.0x
+              (Premier Fitness) up to 10.0x (Fight Club). Higher multiplier = proportionally more gains.
+              Always train in the best gym you can access.
             </p>
           </div>
 

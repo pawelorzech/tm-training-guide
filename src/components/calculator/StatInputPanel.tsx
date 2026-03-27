@@ -2,7 +2,7 @@
 
 import type { CalculatorState, BookBonus } from '@/types/calculator';
 import type { StatType } from '@/types/torn-api';
-import { GYMS, TRAINING_COMPANIES } from '@/lib/constants';
+import { GYMS, TRAINING_COMPANIES, getGymGain } from '@/lib/constants';
 
 interface StatInputPanelProps {
   state: CalculatorState;
@@ -36,7 +36,8 @@ function FieldWrap({ label, children }: FieldWrapProps) {
 }
 
 export function StatInputPanel({ state, onUpdate, apiPopulated }: StatInputPanelProps) {
-  const selectedGym = GYMS.find((g) => g.dots === state.gymDots);
+  const statKey = { STR: 'str', DEF: 'def', SPD: 'spd', DEX: 'dex' }[state.trainedStat] as 'str' | 'def' | 'spd' | 'dex';
+  const selectedGym = GYMS.find((g) => g.gains[statKey] === state.gymDots) ?? GYMS.find(g => g.id === 24);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -78,13 +79,16 @@ export function StatInputPanel({ state, onUpdate, apiPopulated }: StatInputPanel
           value={selectedGym?.id ?? ''}
           onChange={(e) => {
             const gym = GYMS.find((g) => g.id === Number(e.target.value));
-            if (gym) onUpdate('gymDots', gym.dots);
+            if (gym) {
+              const gain = getGymGain(gym.id, state.trainedStat);
+              onUpdate('gymDots', gain);
+            }
           }}
           className={selectClass}
         >
-          {GYMS.map((gym) => (
+          {GYMS.filter(g => g.gains[statKey] > 0 || g.stage !== 'specialist').map((gym) => (
             <option key={gym.id} value={gym.id}>
-              {gym.name} ({gym.dots} dots)
+              {gym.name} ({gym.gains[statKey] > 0 ? `${gym.gains[statKey]}x ${state.trainedStat}` : 'N/A'}) — {gym.energy}E/train
             </option>
           ))}
         </select>

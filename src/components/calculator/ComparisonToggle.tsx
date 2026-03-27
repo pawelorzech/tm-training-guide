@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import type { CalculatorState, CalculatorResults } from '@/types/calculator';
 import { calculateGymGain } from '@/lib/formulas';
 import { projectDailyGain } from '@/lib/formulas';
-import { GYMS } from '@/lib/constants';
+import { GYMS, getGymGain } from '@/lib/constants';
 import { formatStatShort, formatPercent } from '@/lib/format';
 
 interface ComparisonToggleProps {
@@ -32,7 +32,7 @@ const SCENARIOS: Scenario[] = [
   { id: 'book30', label: 'Add 30% book' },
   { id: 'book20', label: 'Add 20% book' },
   { id: 'addXanax', label: 'Add Xanax' },
-  { id: 'switchBalboas', label: 'Switch to Balboas (39 dots)' },
+  { id: 'switchBalboas', label: 'Switch to Balboas (7.5x DEF/DEX)' },
   { id: 'joinLadies', label: 'Join Ladies Strip Club (7-star)' },
   { id: 'joinGents', label: 'Join Gents Strip Club (7-star)' },
 ];
@@ -49,8 +49,8 @@ function applyScenario(state: CalculatorState, scenarioId: ScenarioId): Calculat
     case 'addXanax':
       return { ...state, energySources: { ...state.energySources, xanax: true } };
     case 'switchBalboas': {
-      const balboas = GYMS.find((g) => g.dots === 39);
-      return balboas ? { ...state, gymDots: balboas.dots } : state;
+      const gain = getGymGain(25, state.trainedStat); // Balboas = gym ID 25
+      return { ...state, gymDots: gain };
     }
     case 'joinLadies':
       return { ...state, companyType: 'Ladies Strip Club', companyStarLevel: 7 };

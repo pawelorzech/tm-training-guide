@@ -165,6 +165,7 @@ export default function Home() {
           <Section04_GymProgression
             currentStat={state.currentStat}
             gymDots={state.gymDots}
+            trainedStat={state.trainedStat}
           />
         )}
 

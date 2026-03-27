@@ -4,7 +4,7 @@ import type { CalculatorState, CalculatorResults, EnergySources } from '@/types/
 import type { TornUserData } from '@/types/torn-api';
 import { calculateGymGain, calculateHappyContribution, compareFhcUseVsSell, compareStatEnhancer, projectDailyGain, daysToMilestone } from '@/lib/formulas';
 import { generateRecommendations } from '@/lib/recommendations';
-import { DEFAULT_PRICES, STAT_MILESTONES } from '@/lib/constants';
+import { DEFAULT_PRICES, STAT_MILESTONES, API_GYM_ID_TO_DOTS } from '@/lib/constants';
 
 const defaultEnergySources: EnergySources = {
   natural: true, xanax: false, pointRefill: false, fhc: false, energyCans: 0,
@@ -29,9 +29,22 @@ export function useCalculator(apiData: TornUserData | null) {
 
   useEffect(() => {
     if (!apiData) return;
+    const gymDots = API_GYM_ID_TO_DOTS[apiData.gym.active_gym] ?? 20;
+    // Pick the highest stat as the "current stat" being trained
+    const stats = apiData.battlestats;
+    const statValues = [
+      { stat: 'STR' as const, value: stats.strength },
+      { stat: 'DEF' as const, value: stats.defense },
+      { stat: 'SPD' as const, value: stats.speed },
+      { stat: 'DEX' as const, value: stats.dexterity },
+    ];
+    const highest = statValues.reduce((a, b) => a.value > b.value ? a : b);
+
     setState(prev => ({
       ...prev,
-      currentStat: apiData.battlestats.defense,
+      currentStat: highest.value,
+      trainedStat: highest.stat,
+      gymDots,
       happy: apiData.bars.happy.current,
     }));
   }, [apiData]);

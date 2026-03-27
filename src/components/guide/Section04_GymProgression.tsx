@@ -77,10 +77,10 @@ export function Section04_GymProgression({ currentStat, gymDots }: Section04Prop
       </div>
 
       {/* Gym table */}
-      <div className="overflow-x-auto rounded-lg border border-gray-700">
+      <div className="overflow-x-auto rounded-lg border border-text-secondary/20">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-bg-secondary border-b border-gray-700">
+            <tr className="bg-bg-secondary border-b border-text-secondary/20">
               <th className="text-left px-4 py-3 text-text-secondary font-semibold">Gym</th>
               <th className="text-center px-4 py-3 text-text-secondary font-semibold">Dots</th>
               <th className="text-left px-4 py-3 text-text-secondary font-semibold">
@@ -94,7 +94,7 @@ export function Section04_GymProgression({ currentStat, gymDots }: Section04Prop
               const isNext = nextGym && gym.id === nextGym.id;
               const isUnlocked = canUnlock(gym, currentStat);
 
-              let rowClass = 'border-b border-gray-800 transition-colors';
+              let rowClass = 'border-b border-text-secondary/10 transition-colors';
               if (isCurrent) {
                 rowClass += ' bg-torn-green/10';
               } else if (isNext) {
@@ -157,7 +157,7 @@ export function Section04_GymProgression({ currentStat, gymDots }: Section04Prop
       </div>
 
       {/* Key insight */}
-      <div className="bg-bg-card border border-gray-700 rounded-lg p-4">
+      <div className="bg-bg-card border border-text-secondary/20 rounded-lg p-4">
         <p className="text-text-primary font-semibold">Key insight</p>
         <p className="text-text-secondary text-sm mt-1">
           Balboas (39 dots) = 2x the dots of George&apos;s (20) = 2x the gains per energy spent.

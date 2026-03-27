@@ -44,7 +44,7 @@ export function Section08_MeritsAndBooks({
 
   return (
     <section id="merits-books" className="space-y-8">
-      <h2 className="text-2xl font-bold text-text-primary border-b border-gray-700 pb-3">
+      <h2 className="text-2xl font-bold text-text-primary border-b border-text-secondary/20 pb-3">
         Merits, Education, and Books
       </h2>
 
@@ -64,10 +64,10 @@ export function Section08_MeritsAndBooks({
         </div>
 
         {/* Merit stat table */}
-        <div className="overflow-x-auto rounded-xl border border-gray-700">
+        <div className="overflow-x-auto rounded-xl border border-text-secondary/20">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-bg-secondary border-b border-gray-700">
+              <tr className="bg-bg-secondary border-b border-text-secondary/20">
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Stat</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Merit Name</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Per Level</th>
@@ -80,7 +80,7 @@ export function Section08_MeritsAndBooks({
                 ([stat, data], index) => (
                   <tr
                     key={stat}
-                    className={`border-b border-gray-800 transition-colors ${
+                    className={`border-b border-text-secondary/10 transition-colors ${
                       stat === trainedStat
                         ? 'bg-torn-green/10 hover:bg-torn-green/15'
                         : index % 2 === 0
@@ -109,10 +109,10 @@ export function Section08_MeritsAndBooks({
           <h4 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-3">
             Merit Cost Breakdown
           </h4>
-          <div className="overflow-x-auto rounded-xl border border-gray-700">
+          <div className="overflow-x-auto rounded-xl border border-text-secondary/20">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-bg-secondary border-b border-gray-700">
+                <tr className="bg-bg-secondary border-b border-text-secondary/20">
                   <th className="text-left px-4 py-3 text-text-secondary font-medium">Level</th>
                   <th className="text-left px-4 py-3 text-text-secondary font-medium">Cost (merits)</th>
                   <th className="text-left px-4 py-3 text-text-secondary font-medium">Total spent</th>
@@ -127,7 +127,7 @@ export function Section08_MeritsAndBooks({
                   return (
                     <tr
                       key={level}
-                      className={`border-b border-gray-800 transition-colors ${
+                      className={`border-b border-text-secondary/10 transition-colors ${
                         isCurrentOrBelow
                           ? 'bg-torn-green/10'
                           : i % 2 === 0
@@ -155,7 +155,7 @@ export function Section08_MeritsAndBooks({
         </div>
 
         {/* Merit slider */}
-        <div className="bg-bg-card border border-gray-700 rounded-xl p-5 space-y-4">
+        <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-5 space-y-4">
           <div className="flex items-center justify-between">
             <label className="text-sm font-semibold text-text-primary">
               Your {trainedStat} merit level
@@ -216,7 +216,7 @@ export function Section08_MeritsAndBooks({
         </div>
 
         {/* Education slider */}
-        <div className="bg-bg-card border border-gray-700 rounded-xl p-5 space-y-4">
+        <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-5 space-y-4">
           <div className="flex items-center justify-between">
             <label className="text-sm font-semibold text-text-primary">
               Your education gym bonus
@@ -285,7 +285,7 @@ export function Section08_MeritsAndBooks({
               className={`rounded-xl border p-4 cursor-pointer transition-colors ${
                 bookBonus === book.key
                   ? 'border-torn-green bg-torn-green/10'
-                  : 'border-gray-700 bg-bg-card hover:border-gray-500'
+                  : 'border-text-secondary/20 bg-bg-card hover:border-gray-500'
               }`}
               onClick={() => onUpdateBook(book.key)}
             >
@@ -333,7 +333,7 @@ export function Section08_MeritsAndBooks({
       </div>
 
       {/* TL;DR */}
-      <div className="bg-bg-secondary border border-gray-600 rounded-xl p-5">
+      <div className="bg-bg-secondary border border-text-secondary/30 rounded-xl p-5">
         <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">TL;DR</p>
         <ul className="space-y-2">
           {[

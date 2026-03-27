@@ -35,7 +35,7 @@ export function Section06_StatEnhancers({ currentStat, results }: Section06Props
       </div>
 
       {/* What SEs do */}
-      <div className="bg-bg-card border border-gray-700 rounded-lg p-4 space-y-2">
+      <div className="bg-bg-card border border-text-secondary/20 rounded-lg p-4 space-y-2">
         <h3 className="text-text-primary font-semibold">What do Stat Enhancers do?</h3>
         <p className="text-text-secondary text-sm">
           Each SE gives you{' '}
@@ -69,10 +69,10 @@ export function Section06_StatEnhancers({ currentStat, results }: Section06Props
         <h3 className="text-text-primary font-semibold mb-3">
           SE vs Xanax — Cost per 1,000 Stat
         </h3>
-        <div className="overflow-x-auto rounded-lg border border-gray-700">
+        <div className="overflow-x-auto rounded-lg border border-text-secondary/20">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-bg-secondary border-b border-gray-700">
+              <tr className="bg-bg-secondary border-b border-text-secondary/20">
                 <th className="text-left px-4 py-3 text-text-secondary font-semibold">Method</th>
                 <th className="text-right px-4 py-3 text-text-secondary font-semibold">Stat Gain</th>
                 <th className="text-right px-4 py-3 text-text-secondary font-semibold">Cost</th>
@@ -82,7 +82,7 @@ export function Section06_StatEnhancers({ currentStat, results }: Section06Props
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-gray-800 bg-danger/5">
+              <tr className="border-b border-text-secondary/10 bg-danger/5">
                 <td className="px-4 py-3">
                   <span className="text-text-primary font-medium">Stat Enhancer</span>
                   <span className="ml-2 text-xs text-danger bg-danger/10 px-2 py-0.5 rounded-full">
@@ -99,7 +99,7 @@ export function Section06_StatEnhancers({ currentStat, results }: Section06Props
                   {seCostPer1K > 0 ? formatMoney(seCostPer1K) : '—'}
                 </td>
               </tr>
-              <tr className="border-b border-gray-800 bg-torn-green/5">
+              <tr className="border-b border-text-secondary/10 bg-torn-green/5">
                 <td className="px-4 py-3">
                   <span className="text-text-primary font-medium">Xanax (250E)</span>
                   <span className="ml-2 text-xs text-torn-green bg-torn-green/10 px-2 py-0.5 rounded-full">
@@ -121,7 +121,7 @@ export function Section06_StatEnhancers({ currentStat, results }: Section06Props
         </div>
 
         {ratio > 0 && (
-          <div className="mt-3 bg-bg-card border border-gray-700 rounded-lg p-3 text-center">
+          <div className="mt-3 bg-bg-card border border-text-secondary/20 rounded-lg p-3 text-center">
             <p className="text-text-primary text-sm">
               Xanax is{' '}
               <span className="text-torn-green font-black text-xl">{formatMultiplier(ratio)}</span>{' '}

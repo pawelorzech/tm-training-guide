@@ -45,7 +45,7 @@ export function Section03_HappyJumping({ currentStat, happy, happyContributionPe
 
   return (
     <section id="happy-jumping" className="space-y-6">
-      <h2 className="text-2xl font-bold text-text-primary border-b border-gray-700 pb-3">
+      <h2 className="text-2xl font-bold text-text-primary border-b border-text-secondary/20 pb-3">
         Happy Jumping — When It Matters and When It Doesn&apos;t
       </h2>
 
@@ -66,7 +66,7 @@ export function Section03_HappyJumping({ currentStat, happy, happyContributionPe
       </div>
 
       {/* Chart */}
-      <div className="bg-bg-card border border-gray-700 rounded-xl p-5">
+      <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-5">
         <p className="text-sm font-medium text-text-secondary mb-4">
           Happy Contribution % — across all stat levels (at your current happy of{' '}
           <strong className="text-text-primary">{happy.toLocaleString()}</strong>)
@@ -144,7 +144,7 @@ export function Section03_HappyJumping({ currentStat, happy, happyContributionPe
       </div>
 
       {/* TL;DR */}
-      <div className="bg-bg-secondary border border-gray-600 rounded-xl p-5">
+      <div className="bg-bg-secondary border border-text-secondary/30 rounded-xl p-5">
         <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">TL;DR</p>
         <ul className="space-y-2">
           {[

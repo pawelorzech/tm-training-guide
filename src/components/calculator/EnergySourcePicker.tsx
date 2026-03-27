@@ -48,7 +48,7 @@ export function EnergySourcePicker({
   const energyCanInfo = ENERGY_SOURCES.find((s) => s.id === 'energyCan');
 
   return (
-    <div className="bg-bg-card border border-gray-700 rounded-xl p-4 space-y-3">
+    <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-4 space-y-3">
       <h3 className="text-text-primary font-semibold text-sm">Daily Energy Sources</h3>
 
       <div className="space-y-2">
@@ -136,7 +136,7 @@ export function EnergySourcePicker({
                 max={6}
                 value={energySources.energyCans}
                 onChange={(e) => setCans(Number(e.target.value))}
-                className="w-14 bg-bg-secondary border border-gray-600 rounded-md px-2 py-1
+                className="w-14 bg-bg-secondary border border-text-secondary/30 rounded-md px-2 py-1
                   text-text-primary text-sm text-center
                   focus:outline-none focus:border-torn-green focus:ring-1 focus:ring-torn-green"
               />
@@ -150,7 +150,7 @@ export function EnergySourcePicker({
       </div>
 
       {/* Totals */}
-      <div className="border-t border-gray-700 pt-3 space-y-1">
+      <div className="border-t border-text-secondary/20 pt-3 space-y-1">
         <div className="flex justify-between text-sm">
           <span className="text-text-secondary">Total daily energy</span>
           <span className="text-text-primary font-semibold">{totalEnergy}E</span>

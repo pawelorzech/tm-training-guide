@@ -12,13 +12,13 @@ interface StatInputPanelProps {
 
 const labelClass = 'block text-xs font-medium text-text-secondary mb-1';
 const inputClass =
-  'w-full bg-bg-card border border-gray-600 rounded-md px-3 py-2 text-text-primary text-sm ' +
+  'w-full bg-bg-card border border-text-secondary/30 rounded-md px-3 py-2 text-text-primary text-sm ' +
   'focus:outline-none focus:border-torn-green focus:ring-1 focus:ring-torn-green';
 const apiInputClass =
   'w-full bg-bg-card border border-blue-500 rounded-md px-3 py-2 text-text-primary text-sm ' +
   'focus:outline-none focus:border-torn-green focus:ring-1 focus:ring-torn-green';
 const selectClass =
-  'w-full bg-bg-card border border-gray-600 rounded-md px-3 py-2 text-text-primary text-sm ' +
+  'w-full bg-bg-card border border-text-secondary/30 rounded-md px-3 py-2 text-text-primary text-sm ' +
   'focus:outline-none focus:border-torn-green focus:ring-1 focus:ring-torn-green';
 
 interface FieldWrapProps {

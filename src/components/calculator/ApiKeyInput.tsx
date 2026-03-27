@@ -26,7 +26,7 @@ export function ApiKeyInput({
   const isLoaded = !!playerName;
 
   return (
-    <div className="bg-bg-card border border-gray-700 rounded-lg p-4 space-y-3">
+    <div className="bg-bg-card border border-text-secondary/20 rounded-lg p-4 space-y-3">
       <div className="flex items-center justify-between">
         <h3 className="text-text-primary font-semibold text-sm">Load My Stats from Torn API</h3>
         {isLoaded && (
@@ -47,7 +47,7 @@ export function ApiKeyInput({
             onChange={(e) => onApiKeyChange(e.target.value)}
             placeholder="Enter your Torn API key"
             disabled={loading || isLoaded}
-            className="w-full bg-bg-secondary border border-gray-600 rounded-md px-3 py-2 pr-10
+            className="w-full bg-bg-secondary border border-text-secondary/30 rounded-md px-3 py-2 pr-10
               text-text-primary placeholder-gray-500 text-sm
               focus:outline-none focus:border-torn-green focus:ring-1 focus:ring-torn-green
               disabled:opacity-50 disabled:cursor-not-allowed"
@@ -99,7 +99,7 @@ export function ApiKeyInput({
         ) : (
           <button
             onClick={onClear}
-            className="px-4 py-2 bg-bg-secondary border border-gray-600 text-text-secondary rounded-md text-sm font-medium
+            className="px-4 py-2 bg-bg-secondary border border-text-secondary/30 text-text-secondary rounded-md text-sm font-medium
               hover:border-gray-500 hover:text-text-primary transition-colors"
           >
             Clear
@@ -117,7 +117,7 @@ export function ApiKeyInput({
         </p>
       )}
 
-      <div className="text-xs text-text-secondary space-y-1.5 border-t border-gray-700 pt-3">
+      <div className="text-xs text-text-secondary space-y-1.5 border-t border-text-secondary/20 pt-3">
         <p>
           <strong className="text-text-primary">Required access level:</strong>{' '}
           <span className="text-torn-green font-medium">Limited</span> or higher.{' '}

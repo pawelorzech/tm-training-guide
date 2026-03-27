@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0f0f1a"/>
+  <rect x="4" y="11" width="4" height="10" rx="1" fill="#7ca900"/>
+  <rect x="24" y="11" width="4" height="10" rx="1" fill="#7ca900"/>
+  <rect x="8" y="13" width="3" height="6" rx="1" fill="#7ca900"/>
+  <rect x="21" y="13" width="3" height="6" rx="1" fill="#7ca900"/>
+  <rect x="11" y="14.5" width="10" height="3" rx="1" fill="#7ca900"/>
+  <text x="16" y="28" text-anchor="middle" font-family="Arial,sans-serif" font-size="6" font-weight="bold" fill="#e0e0e0">TM</text>
+</svg>

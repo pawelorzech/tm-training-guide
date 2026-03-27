@@ -109,7 +109,7 @@ export function Section05_EnergyManagement({
         {RANKED_SOURCES.map((src) => (
           <div
             key={src.rank}
-            className="bg-bg-card border border-gray-700 rounded-lg p-4 flex items-start gap-4"
+            className="bg-bg-card border border-text-secondary/20 rounded-lg p-4 flex items-start gap-4"
           >
             <span className="text-2xl font-black text-text-secondary/40 w-6 flex-shrink-0 leading-none mt-0.5">
               {src.rank}
@@ -131,7 +131,7 @@ export function Section05_EnergyManagement({
       </div>
 
       {/* Chart */}
-      <div className="bg-bg-card border border-gray-700 rounded-lg p-4">
+      <div className="bg-bg-card border border-text-secondary/20 rounded-lg p-4">
         <h3 className="text-text-primary font-semibold mb-3">Cost per 1K Stat — Visual Comparison</h3>
         <EnergyCostChart gainPerEnergy={gainPerEnergy} />
         <p className="text-xs text-text-secondary mt-2">

@@ -50,7 +50,7 @@ export function Section07_CompanyPerks({ trainedStat, companyType, onUpdateCompa
 
   return (
     <section id="company-perks" className="space-y-6">
-      <h2 className="text-2xl font-bold text-text-primary border-b border-gray-700 pb-3">
+      <h2 className="text-2xl font-bold text-text-primary border-b border-text-secondary/20 pb-3">
         Company Perks for Training
       </h2>
 
@@ -86,7 +86,7 @@ export function Section07_CompanyPerks({ trainedStat, companyType, onUpdateCompa
         <select
           value={companyType ?? ''}
           onChange={(e) => onUpdateCompany(e.target.value || null)}
-          className="w-full sm:w-72 bg-bg-card border border-gray-600 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-torn-green"
+          className="w-full sm:w-72 bg-bg-card border border-text-secondary/30 rounded-lg px-3 py-2 text-text-primary text-sm focus:outline-none focus:border-torn-green"
         >
           <option value="">None / Not relevant</option>
           {TRAINING_COMPANIES.map((c) => (
@@ -97,7 +97,7 @@ export function Section07_CompanyPerks({ trainedStat, companyType, onUpdateCompa
         </select>
 
         {selectedCompany && activePerks.length > 0 && (
-          <div className="mt-3 bg-bg-secondary border border-gray-700 rounded-xl p-4 space-y-2">
+          <div className="mt-3 bg-bg-secondary border border-text-secondary/20 rounded-xl p-4 space-y-2">
             <p className="text-sm font-semibold text-torn-green">
               Your company perks — {selectedCompany.name}
             </p>
@@ -130,10 +130,10 @@ export function Section07_CompanyPerks({ trainedStat, companyType, onUpdateCompa
       {/* Full company table */}
       <div>
         <h3 className="text-lg font-semibold text-text-primary mb-3">All Training Company Perks</h3>
-        <div className="overflow-x-auto rounded-xl border border-gray-700">
+        <div className="overflow-x-auto rounded-xl border border-text-secondary/20">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-bg-secondary border-b border-gray-700">
+              <tr className="bg-bg-secondary border-b border-text-secondary/20">
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Company</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Stars</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Perk</th>
@@ -148,7 +148,7 @@ export function Section07_CompanyPerks({ trainedStat, companyType, onUpdateCompa
                   return (
                     <tr
                       key={`${company.name}-${perk.star}`}
-                      className={`border-b border-gray-800 transition-colors ${
+                      className={`border-b border-text-secondary/10 transition-colors ${
                         relevant
                           ? 'bg-torn-green/10 hover:bg-torn-green/15'
                           : rowIndex % 2 === 0
@@ -194,7 +194,7 @@ export function Section07_CompanyPerks({ trainedStat, companyType, onUpdateCompa
       </div>
 
       {/* TL;DR */}
-      <div className="bg-bg-secondary border border-gray-600 rounded-xl p-5">
+      <div className="bg-bg-secondary border border-text-secondary/30 rounded-xl p-5">
         <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">TL;DR</p>
         <ul className="space-y-2">
           {[

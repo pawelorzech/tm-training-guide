@@ -24,7 +24,7 @@ function StatCard({
   sub?: string;
 }) {
   return (
-    <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3 text-center">
+    <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3 text-center">
       <p className="text-xs text-text-secondary mb-1">{label}</p>
       <p className="text-lg font-bold text-text-primary">{value}</p>
       {sub && <p className="text-xs text-text-secondary mt-0.5">{sub}</p>}
@@ -34,9 +34,9 @@ function StatCard({
 
 function priorityBadge(priority: Recommendation['priority']) {
   const classes = {
-    high: 'bg-red-900/40 text-red-400 border border-red-800',
-    medium: 'bg-yellow-900/40 text-yellow-400 border border-yellow-800',
-    low: 'bg-gray-700 text-text-secondary border border-gray-600',
+    high: 'bg-danger/10 text-danger border border-danger/30',
+    medium: 'bg-warning/10 text-warning border border-warning/30',
+    low: 'bg-bg-card text-text-secondary border border-text-secondary/30',
   };
   return (
     <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${classes[priority]}`}>
@@ -69,10 +69,10 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
 
   const happyBadgeClass =
     happyContributionPercent > 5
-      ? 'bg-torn-green/20 text-torn-green border border-torn-green/40'
+      ? 'bg-torn-green/10 text-torn-green border border-torn-green/40'
       : happyContributionPercent < 1
-      ? 'bg-gray-700 text-text-secondary border border-gray-600'
-      : 'bg-yellow-900/40 text-yellow-400 border border-yellow-800';
+      ? 'bg-bg-card text-text-secondary border border-text-secondary/30'
+      : 'bg-warning/10 text-warning border border-warning/30';
 
   return (
     <div className="space-y-4">
@@ -108,12 +108,12 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
 
       {/* Projections row */}
       <div className="grid grid-cols-2 gap-3">
-        <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3">
+        <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3">
           <p className="text-xs text-text-secondary mb-1">Monthly Projection</p>
           <p className="text-lg font-bold text-text-primary">{formatStatShort(monthlyProjection)}</p>
           <p className="text-xs text-text-secondary">+{formatStatShort(gainPerDay * 30)} gained</p>
         </div>
-        <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3">
+        <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3">
           <p className="text-xs text-text-secondary mb-1">Yearly Projection</p>
           <p className="text-lg font-bold text-text-primary">{formatStatShort(yearlyProjection)}</p>
           <p className="text-xs text-text-secondary">+{formatStatShort(gainPerDay * 365)} gained</p>
@@ -122,7 +122,7 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
 
       {/* Happy + Milestone row */}
       <div className="grid grid-cols-2 gap-3">
-        <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3">
+        <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3">
           <p className="text-xs text-text-secondary mb-1">Happy Contribution</p>
           <span className={`inline-block text-sm font-semibold px-2 py-0.5 rounded ${happyBadgeClass}`}>
             {formatPercent(happyContributionPercent)}
@@ -135,7 +135,7 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
               : 'Minor contribution'}
           </p>
         </div>
-        <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3">
+        <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3">
           <p className="text-xs text-text-secondary mb-1">
             Days to {milestoneLabel(nextMilestone)}
           </p>
@@ -147,7 +147,7 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
       </div>
 
       {/* FHC Comparison */}
-      <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3">
+      <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3">
         <p className="text-xs text-text-secondary mb-2 uppercase tracking-wide font-medium">FHC Comparison</p>
         <div className="flex items-center justify-between text-sm">
           <div>
@@ -166,7 +166,7 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
       </div>
 
       {/* SE Comparison */}
-      <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3">
+      <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3">
         <p className="text-xs text-text-secondary mb-2 uppercase tracking-wide font-medium">Stat Enhancer vs Xanax</p>
         <div className="flex items-center justify-between text-sm flex-wrap gap-2">
           <div>
@@ -190,7 +190,7 @@ export function ResultsPanel({ results, state }: ResultsPanelProps) {
           {recommendations.map((rec) => (
             <div
               key={rec.id}
-              className="bg-bg-secondary border border-gray-700 rounded-lg p-3 flex gap-3"
+              className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3 flex gap-3"
             >
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap mb-0.5">

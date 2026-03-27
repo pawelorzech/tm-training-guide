@@ -120,7 +120,7 @@ export function ComparisonToggle({ state, results, onUpdate }: ComparisonToggleP
   }
 
   return (
-    <div className="bg-bg-card border border-gray-700 rounded-xl p-4 space-y-4">
+    <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-4 space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-text-primary font-semibold text-sm">What-If Comparison</h3>
         {selectedScenario && (
@@ -136,7 +136,7 @@ export function ComparisonToggle({ state, results, onUpdate }: ComparisonToggleP
       <select
         value={selectedScenario}
         onChange={(e) => setSelectedScenario(e.target.value as ScenarioId)}
-        className="w-full bg-bg-secondary border border-gray-600 rounded-md px-3 py-2 text-text-primary text-sm
+        className="w-full bg-bg-secondary border border-text-secondary/30 rounded-md px-3 py-2 text-text-primary text-sm
           focus:outline-none focus:border-torn-green focus:ring-1 focus:ring-torn-green"
       >
         {SCENARIOS.map((s) => (
@@ -148,7 +148,7 @@ export function ComparisonToggle({ state, results, onUpdate }: ComparisonToggleP
         <div className="space-y-3">
           {/* Side-by-side comparison */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-bg-secondary border border-gray-700 rounded-lg p-3 text-center">
+            <div className="bg-bg-secondary border border-text-secondary/20 rounded-lg p-3 text-center">
               <p className="text-xs text-text-secondary mb-1">Current / Day</p>
               <p className="text-xl font-bold text-text-primary">
                 {formatStatShort(currentGainPerDay)}
@@ -170,7 +170,7 @@ export function ComparisonToggle({ state, results, onUpdate }: ComparisonToggleP
                   ? 'bg-torn-green/10 border-torn-green/30'
                   : diff < 0
                   ? 'bg-red-900/20 border-red-800/40'
-                  : 'bg-bg-secondary border-gray-700'
+                  : 'bg-bg-secondary border-text-secondary/20'
               }`}
             >
               <span className="text-sm text-text-secondary">Difference</span>

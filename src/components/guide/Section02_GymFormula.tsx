@@ -14,7 +14,7 @@ interface Section02Props {
 export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }: Section02Props) {
   return (
     <section id="gym-formula" className="space-y-6">
-      <h2 className="text-2xl font-bold text-text-primary border-b border-gray-700 pb-3">
+      <h2 className="text-2xl font-bold text-text-primary border-b border-text-secondary/20 pb-3">
         The Gym Formula — Demystified
       </h2>
 
@@ -25,18 +25,18 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
       </p>
 
       {/* Formula Block */}
-      <div className="bg-bg-card border border-gray-700 rounded-xl p-5 overflow-x-auto">
+      <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-5 overflow-x-auto">
         <p className="text-xs text-text-secondary uppercase tracking-wider mb-3 font-medium">The Formula</p>
         <pre className="text-sm leading-loose font-mono whitespace-pre-wrap break-words">
           <span className="text-text-secondary">Gain = (</span>
-          <span className="text-blue-400 font-semibold">Gym_Dots</span>
+          <span className="text-blue-600 font-semibold">Gym_Dots</span>
           <span className="text-text-secondary"> × 4) × (0.00019106 × </span>
           <span className="text-torn-green font-semibold">Current_Stat</span>
           <span className="text-text-secondary">{'\n'}         + 0.00226263 × </span>
-          <span className="text-yellow-400 font-semibold">Happy</span>
+          <span className="text-amber-600 font-semibold">Happy</span>
           <span className="text-text-secondary"> + 0.55)</span>
           <span className="text-text-secondary">{'\n'}       × (1 + </span>
-          <span className="text-purple-400 font-semibold">Steadfast + Education</span>
+          <span className="text-purple-600 font-semibold">Steadfast + Education</span>
           <span className="text-text-secondary">) / 150 × Energy</span>
         </pre>
       </div>
@@ -47,8 +47,8 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Gym Dots */}
-          <div className="bg-bg-card border border-blue-500/30 rounded-xl p-4">
-            <p className="font-semibold text-blue-400 mb-2">Gym_Dots</p>
+          <div className="bg-bg-card border border-blue-600/30 rounded-xl p-4">
+            <p className="font-semibold text-blue-600 mb-2">Gym_Dots</p>
             <p className="text-sm text-text-secondary leading-relaxed">
               The quality rating of your current gym. Ranges from 2 dots (Premier Fitness) to 39 dots
               (Balboas Gym). This multiplies your entire gain linearly — switching from a 10-dot to a
@@ -67,8 +67,8 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
           </div>
 
           {/* Happy */}
-          <div className="bg-bg-card border border-yellow-400/30 rounded-xl p-4">
-            <p className="font-semibold text-yellow-400 mb-2">Happy</p>
+          <div className="bg-bg-card border border-amber-600/30 rounded-xl p-4">
+            <p className="font-semibold text-amber-600 mb-2">Happy</p>
             <p className="text-sm text-text-secondary leading-relaxed">
               Your current happiness value. It adds a flat additive bonus inside the formula. At low
               stats, happy can represent a significant chunk of your gains. At high stats, it becomes
@@ -78,8 +78,8 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
           </div>
 
           {/* Steadfast + Education */}
-          <div className="bg-bg-card border border-purple-400/30 rounded-xl p-4">
-            <p className="font-semibold text-purple-400 mb-2">Steadfast + Education</p>
+          <div className="bg-bg-card border border-purple-600/30 rounded-xl p-4">
+            <p className="font-semibold text-purple-600 mb-2">Steadfast + Education</p>
             <p className="text-sm text-text-secondary leading-relaxed">
               Percentage multipliers that stack additively. Steadfast is a Torn perk (up to +20%).
               Education courses can add up to +15%. These multiply your entire gain — a +35% total
@@ -97,11 +97,11 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
           daily/monthly/yearly projections look like.
         </p>
 
-        <div className="bg-bg-card border border-gray-700 rounded-xl p-5">
+        <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-5">
           <StatInputPanel state={state} onUpdate={onUpdate} apiPopulated={apiPopulated} />
         </div>
 
-        <div className="bg-bg-card border border-gray-700 rounded-xl p-5">
+        <div className="bg-bg-card border border-text-secondary/20 rounded-xl p-5">
           <ResultsPanel results={results} state={state} />
         </div>
       </div>
@@ -122,7 +122,7 @@ export function Section02_GymFormula({ state, results, onUpdate, apiPopulated }:
       </div>
 
       {/* TL;DR */}
-      <div className="bg-bg-secondary border border-gray-600 rounded-xl p-5">
+      <div className="bg-bg-secondary border border-text-secondary/30 rounded-xl p-5">
         <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">TL;DR</p>
         <ul className="space-y-2">
           {[

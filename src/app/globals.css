@@ -17,11 +17,14 @@
 
 /* Light theme */
 :root.light {
-  --bg-primary: #f5f5f5;
+  --bg-primary: #f0f2f5;
   --bg-secondary: #ffffff;
-  --bg-card: #e8ecf0;
+  --bg-card: #ffffff;
   --text-primary: #1a1a2e;
-  --text-secondary: #555555;
+  --text-secondary: #5a6068;
+  --danger: #c0392b;
+  --warning: #d68910;
+  --torn-green: #5a8a00;
 }
 
 @theme inline {

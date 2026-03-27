@@ -21,7 +21,7 @@ function DotsDisplay({ dots }: { dots: number }) {
 export function Section01_GettingStarted() {
   return (
     <section id="getting-started" className="space-y-6">
-      <h2 className="text-2xl font-bold text-text-primary border-b border-gray-700 pb-3">
+      <h2 className="text-2xl font-bold text-text-primary border-b border-text-secondary/20 pb-3">
         Getting Started (Levels 1–15)
       </h2>
 
@@ -49,10 +49,10 @@ export function Section01_GettingStarted() {
       {/* Gym Progression Table */}
       <div>
         <h3 className="text-lg font-semibold text-text-primary mb-3">Gym Progression (First 8 Gyms)</h3>
-        <div className="overflow-x-auto rounded-xl border border-gray-700">
+        <div className="overflow-x-auto rounded-xl border border-text-secondary/20">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-bg-secondary border-b border-gray-700">
+              <tr className="bg-bg-secondary border-b border-text-secondary/20">
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">#</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Gym</th>
                 <th className="text-left px-4 py-3 text-text-secondary font-medium">Dots</th>
@@ -63,7 +63,7 @@ export function Section01_GettingStarted() {
               {FIRST_EIGHT_GYMS.map((gym, index) => (
                 <tr
                   key={gym.id}
-                  className={`border-b border-gray-800 ${index % 2 === 0 ? 'bg-bg-card' : 'bg-bg-secondary'} hover:bg-bg-secondary/80 transition-colors`}
+                  className={`border-b border-text-secondary/10 ${index % 2 === 0 ? 'bg-bg-card' : 'bg-bg-secondary'} hover:bg-bg-secondary/80 transition-colors`}
                 >
                   <td className="px-4 py-3 text-text-secondary">{gym.id}</td>
                   <td className="px-4 py-3 font-medium text-text-primary">{gym.name}</td>
@@ -112,7 +112,7 @@ export function Section01_GettingStarted() {
       </div>
 
       {/* TL;DR */}
-      <div className="bg-bg-secondary border border-gray-600 rounded-xl p-5">
+      <div className="bg-bg-secondary border border-text-secondary/30 rounded-xl p-5">
         <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">TL;DR</p>
         <ul className="space-y-2">
           {[

@@ -117,9 +117,26 @@ export function ApiKeyInput({
         </p>
       )}
 
-      <p className="text-xs text-text-secondary">
-        Your API key stays in your browser. We never store or transmit it.
-      </p>
+      <div className="text-xs text-text-secondary space-y-1.5 border-t border-gray-700 pt-3">
+        <p>
+          <strong className="text-text-primary">Required access level:</strong>{' '}
+          <span className="text-torn-green font-medium">Limited</span> or higher.{' '}
+          Generate one at{' '}
+          <a href="https://www.torn.com/preferences.php#tab=api" target="_blank" rel="noopener noreferrer" className="text-torn-green hover:underline">
+            Settings → API Key
+          </a>.
+        </p>
+        <p>
+          <strong className="text-text-primary">What we read:</strong>{' '}
+          your battle stats, energy, happy, current gym, and drug usage stats.
+          We only <em>read</em> data — nothing is ever written or modified on your account.
+        </p>
+        <p>
+          <strong className="text-text-primary">Privacy:</strong>{' '}
+          your API key stays in your browser (localStorage). It is sent <em>only</em> to{' '}
+          <code className="text-torn-green">api.torn.com</code> — never to our server or any third party.
+        </p>
+      </div>
     </div>
   );
 }

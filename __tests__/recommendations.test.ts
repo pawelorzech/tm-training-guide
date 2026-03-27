@@ -5,7 +5,7 @@ import type { CalculatorState, CalculatorResults } from '../src/types/calculator
 const baseState: CalculatorState = {
   currentStat: 1_000_000_000,
   trainedStat: 'DEF',
-  gymDots: 39,
+  gymDots: 10.0,  // Fight Club level — no gym upgrade triggered
   happy: 4000,
   steadfastBonus: 0,
   educationBonus: 0,

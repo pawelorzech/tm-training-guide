@@ -11,7 +11,7 @@ import {
 describe('calculateGymGain', () => {
   test('matches known data point: bombel at 1.276B DEF, Balboas', () => {
     const gain = calculateGymGain({
-      gymDots: 39,
+      gymDots: 7.5,  // Balboas DEF wiki gain multiplier
       currentStat: 1_276_323_613,
       happy: 4443,
       steadfastBonus: 0,
@@ -24,11 +24,11 @@ describe('calculateGymGain', () => {
 
   test('gain scales linearly with energy', () => {
     const gain1 = calculateGymGain({
-      gymDots: 39, currentStat: 1_000_000_000, happy: 4000,
+      gymDots: 7.5, currentStat: 1_000_000_000, happy: 4000,
       steadfastBonus: 0, educationBonus: 0, energyUsed: 1,
     });
     const gain10 = calculateGymGain({
-      gymDots: 39, currentStat: 1_000_000_000, happy: 4000,
+      gymDots: 7.5, currentStat: 1_000_000_000, happy: 4000,
       steadfastBonus: 0, educationBonus: 0, energyUsed: 10,
     });
     expect(gain10).toBeCloseTo(gain1 * 10, 0);
@@ -39,14 +39,14 @@ describe('calculateGymGain', () => {
       currentStat: 1_000_000_000, happy: 4000,
       steadfastBonus: 0, educationBonus: 0, energyUsed: 1,
     };
-    const gainGeorges = calculateGymGain({ ...params, gymDots: 20 });
-    const gainBalboas = calculateGymGain({ ...params, gymDots: 39 });
-    expect(gainBalboas / gainGeorges).toBeCloseTo(39 / 20, 1);
+    const gainGeorges = calculateGymGain({ ...params, gymDots: 7.3 });  // George's all stats
+    const gainBalboas = calculateGymGain({ ...params, gymDots: 7.5 });  // Balboas DEF
+    expect(gainBalboas / gainGeorges).toBeCloseTo(7.5 / 7.3, 1);
   });
 
   test('steadfast bonus increases gain', () => {
     const params = {
-      gymDots: 39, currentStat: 1_000_000_000, happy: 4000,
+      gymDots: 7.5, currentStat: 1_000_000_000, happy: 4000,
       educationBonus: 0, energyUsed: 1,
     };
     const base = calculateGymGain({ ...params, steadfastBonus: 0 });
@@ -77,7 +77,7 @@ describe('compareFhcUseVsSell', () => {
   test('selling FHC is ~25x better than using at high stats', () => {
     const result = compareFhcUseVsSell({
       currentStat: 1_276_323_613,
-      gymDots: 39,
+      gymDots: 7.5,  // Balboas DEF
       happy: 4443,
       steadfastBonus: 0,
       educationBonus: 0.10,
@@ -96,7 +96,7 @@ describe('compareStatEnhancer', () => {
       currentStat: 1_276_323_613,
       sePrice: 450_000_000,
       xanaxPrice: 839_000,
-      gymDots: 39,
+      gymDots: 7.5,  // Balboas DEF
       happy: 4443,
       steadfastBonus: 0,
       educationBonus: 0.10,

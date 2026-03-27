@@ -11,10 +11,11 @@ export interface GymGainParams {
 
 export function calculateGymGain(params: GymGainParams): number {
   const { gymDots, currentStat, happy, steadfastBonus, educationBonus, energyUsed } = params;
-  // Note: the effective stat coefficient (2.4114e-6) differs from the PRD formula (0.00019106).
-  // The PRD formula is used for happy contribution analysis; this coefficient is calibrated
-  // to match actual in-game data points (e.g. ~3533 DEF/E at 1.276B DEF, 39 dots, +10% edu).
-  const statComponent = 2.4114e-6 * currentStat;
+  // Coefficient calibrated to match actual in-game data:
+  // ~3533 DEF/E at 1.276B DEF in Balboas (7.5 gain), ~10% bonuses, ~4500 happy.
+  // Previously 2.4114e-6 was calibrated for PRD "dots" scale (Balboas=39); recalibrated
+  // for wiki gain multipliers (Balboas DEF=7.5) by factor 39/7.5 = 5.2.
+  const statComponent = 1.2539e-5 * currentStat;
   const happyComponent = 0.00226263 * happy;
   const inner = statComponent + happyComponent + 0.55;
   const raw = (gymDots * 4) * inner * (1 + steadfastBonus + educationBonus) / 150 * energyUsed;
